@@ -15,7 +15,7 @@ if (isset($_GET['login'])){
 </head>
 <body>
     <div class="two-columns">
-    <input type="submit" value="Crear" name='craeruser' class="button" href="crearuser.php">
+    <input type="submit" value="Crear" name='crearuser' class="button" href="../services/crearuser.php">
 <?php
     if(!empty($_SESSION['nom_admin'])){
         $conexion = mysqli_connect("localhost","root","","????");
