@@ -53,7 +53,7 @@ if (isset($_GET['login'])){
         }
     
     else{
-        header("Location:login.php");
+        header("Location:../index.php");
     }   
 }else {
     header("location:../index.php");
