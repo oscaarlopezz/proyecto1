@@ -16,16 +16,13 @@
 
         <h1>LOGIN</h1>
         <div class="escuela">
-
-
             <div class="input-escuela">
                 <i class="fas fa-user icon"></i>
-                <input type="text" name='usuario' required VALUE='' placeholder="Usuario"><br><br>
-
+                <input type="text" name='usuario' required VALUE='' placeholder="Usuario">
+            </div>  
             <div class="input-escuela">
                 <i class="fas fa-key icon"></i>
-                <input type="password" name='password' required VALUE='' placeholder="Contraseña"><br><br>
-
+                <input type="password" name='password' required VALUE='' placeholder="Contraseña">
             </div>
             <input type="submit" value="Iniciar Sesión" name='login' class="button" href="datos.php">
         </div>
