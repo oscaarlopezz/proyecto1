@@ -15,24 +15,27 @@
 </head>
 
 <body>
-    <form class="login">
+    <div class="blur">
+        <div class="blur2">
+        <form class="login">
 
-        <h1>LOGIN</h1>
-        <div class="escuela">
-            <div class="input-escuela">
-                <i class="fas fa-user icon"></i>
-                <input type="text" name='usuario' required VALUE='' placeholder="Usuario">
-            </div>  
-            <div class="input-escuela">
-                <i class="fas fa-key icon"></i>
-                <input type="password" name='password' required VALUE='' placeholder="Contraseña">
-                <br>
-                <br>
+            <h1>LOGIN</h1>
+            <div class="escuela">
+                <div class="input-escuela">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" name='usuario' required VALUE='' placeholder="Usuario">
+                </div>  
+                <div class="input-escuela">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" name='password' required VALUE='' placeholder="Contraseña">
+                    <br>
+                    <br>
+                </div>
+                <input type="submit" value="Iniciar Sesión" name='login' class="button" href="datos.php">
             </div>
-            <input type="submit" value="Iniciar Sesión" name='login' class="button" href="datos.php">
-        </div>
-    </form>
-
+        </form>
+    </div>
+    </div>
 </body>
 
 </html>

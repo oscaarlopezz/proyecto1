@@ -14,7 +14,7 @@
 body {
     /* margin-top: 7%; */
     padding: 7% 33% 0;
-    background: url(../img/marmol.jpg);
+    background: url(../img/login.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -23,10 +23,22 @@ body {
     width: 95%;
     padding: 25px;
 }
-
+.blur {
+    border-radius: 5%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.blur2 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100%;
+    width: 100%;
+}
 .login {
     border-radius: 5%;
-    background: rgb(0, 0, 0);
     padding: 5%;
     /*margin-top: 40px;*/
     width: 100%;
@@ -37,7 +49,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     font-size: 3vw;
 }
 
@@ -57,11 +69,14 @@ input[type="password"] {
     height: 40px;
     font-size: 1vw;
 }
-
+.input-escuela i {
+    color: black;
+    width: 5%;
+}
 .icon {
     width: 5%;
     text-align: center;
-    color: #999;
+    color: black;
     float: left;
 }
 
