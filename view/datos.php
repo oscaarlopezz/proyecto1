@@ -1,6 +1,7 @@
 <?php
-if (isset($_GET['login'])){
-    session_start();
+//if (isset($_GET['login'])){
+//    session_start();
+include_once '../services/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,47 +18,49 @@ if (isset($_GET['login'])){
     <div class="two-columns">
     <input type="submit" value="Crear" name='crearuser' class="button" href="../services/crearuser.php">
 <?php
-    if(!empty($_SESSION['nom_admin'])){
-        $conexion = mysqli_connect("localhost","root","","????");
-    
-        $result = mysqli_query($conexion,"SELECT * FROM ????");
-        echo "<a href='crearusers.php'>crear</a>";
-        echo "<table>";
-        echo "<tr>";
-        echo "<th>Nombre</th>";
-        echo "<th>Nombre</th>";
-        echo "<th>Apellido</th>";
-        echo "<th>Curso</th>";
-        echo "<th>Grupo</th>";
-        echo "<th>Edad</th>";
-        echo "<th>Actualizar</th>";
-        echo "<th>Eliminar</th>";
-        echo "</th>";
-    
-        foreach ($result as $registro){
-            echo "<tr>";
-            echo "<td>{$registro['id_alumno']}</td>";
-            echo "<td>{$registro['nombre_alu']}</td>";
-            echo "<td>{$registro['apellidos_alu']}</td>";
-            echo "<td>{$registro['curso_alu']}</td>";
-            echo "<td>{$registro['grupo_alu']}</td>";
-            echo "<td>{$registro['edad_alu']}</td>";
-            echo "<form method='GET' action='actualizar.php'>";
-            echo "<input type='hidden' name='id' value='$registro[id_alumno]'>";
-            echo "<td><input type='submit' value='Enviar' onclick=\"return confirm('Quieres ir a actualizar?')\" >";
-            echo "</td></form>";
-            echo "<td><button><a href='eliminar.php?id=$registro[id_alumno]'>Eliminar</a></button></td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-        }
-    
+     // Check connection
+     if (!$conexion) {
+         die("Connection failed: ".mysqli_connect_error());
+     }
+     $sql="select * from emp";
+     $result=mysqli_query($conexion,$sql);
+ ?>
+ <table class="table table-bordered">
+         <tr class="active">
+             <th>EMPNO</th>
+             <th>ENAME</th>
+             <th>JOB</th>
+             <th>MGR</th>
+             <th>HIREDATE</th>
+             <th>SAL</th>
+             <th>COMM</th>
+             <th>DEPTNO</th>
+         </tr>
+         <?php
+             foreach ($result as $registro){
+         ?>
+             <tr>
+                 <td><?php echo "{$registro['empno']}";?></td>
+                 <td><?php echo "{$registro['ename']}";?></td>
+                 <td><?php echo "{$registro['job']}";?></td>
+                 <td><?php echo "{$registro['mgr']}";?></td>
+                 <td><?php echo "{$registro['hiredate']}";?></td>
+                 <td><?php echo "{$registro['sal']}"?></td>
+                 <td><?php echo "{$registro['comm']}"?></td>
+                 <td><?php echo "{$registro['deptno']}"?></td>
+             </tr>
+         <?php } ?>
+ </table>
+ <?mysqli_close($conexion);?>
+ <?
+/*    
     else{
         header("Location:../index.php");
     }   
 }else {
     header("location:../index.php");
 }
+*/
 ?>
 </body>
 </html>
