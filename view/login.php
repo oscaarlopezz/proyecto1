@@ -24,6 +24,7 @@
                 <i class="fas fa-key icon"></i>
                 <input type="password" name='password' required VALUE='' placeholder="Contraseña">
                 <br>
+                <br>
             </div>
             <input type="submit" value="Iniciar Sesión" name='login' class="button" href="datos.php">
         </div>

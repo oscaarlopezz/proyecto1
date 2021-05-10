@@ -13,9 +13,9 @@
 
 body {
     font-family: 'Alegreya', 'serif';
-    margin-top: 10%;
+    margin-top: 7%;
     padding: 0 10%;
-    background: url(../marmol.jpg);
+    background: url(../img/marmol.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -28,13 +28,19 @@ body {
 .login {
     border-radius: 5%;
     background: rgb(0, 0, 0);
-    padding: 3px;
+    padding: 0.5%;
+    margin-top: 40px;
+    max-width: 700px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
 }
 
 h1 {
     text-align: center;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 /*input[type="usuario"],
@@ -55,16 +61,17 @@ input[type="password"] {
     font-size: 1vw;
 }
 .icon {
-    min-width: 50px;
+    width: 5%;
     text-align: center;
     color: #999;
+    float: left;
 }
 
 .button {
     border: none;
     width: 95%;
     color: white;
-    font-size: 20px;
+    font-size: 1.2vw;
     background: #1a2537;
     padding: 15px 20px;
     border-radius: 5px;
@@ -93,7 +100,7 @@ p {
 @media(min-width:768px) {
     .formulario {
         /*margin: auto;*/
-        width: 500px;
+        width: 100%;
         /*margin-top: 150px;*/
         border-radius: 2%;
     }
