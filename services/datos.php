@@ -1,3 +1,7 @@
+<?php
+if (isset($_GET['login'])){
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,13 +16,7 @@
 <body>
     <div class="two-columns">
     <input type="submit" value="Crear" name='craeruser' class="button" href="crearuser.php">
-
-    
-
-</body>
 <?php
-if (isset($_GET['enviar'])){
-    session_start();
     if(!empty($_SESSION['nom_admin'])){
         $conexion = mysqli_connect("localhost","root","","????");
     
@@ -58,5 +56,8 @@ if (isset($_GET['enviar'])){
         header("Location:login.php");
     }   
 }else {
-    header("location:index.php");
+    header("location:../index.php");
 }
+?>
+</body>
+</html>

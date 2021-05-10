@@ -60,6 +60,7 @@ input[type="password"] {
     height: 40px;
     font-size: 1vw;
 }
+
 .icon {
     width: 5%;
     text-align: center;
@@ -104,4 +105,8 @@ p {
         /*margin-top: 150px;*/
         border-radius: 2%;
     }
+}
+
+@media screen and (max-width:600px) {
+    
 }
