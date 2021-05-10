@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    /* font */
+    font-family: 'Zilla Slab', serif;
+    overflow-x: hidden;
+    /*bloquear barra horizontal*/
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /*no mostrar barra scroll pero funciona*/
+}
+
+body {
+    font-family: 'Alegreya', 'serif';
+    margin: 10%;
+    background: url(../marmol.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.escuela {
+    width: 95%;
+    padding: 25px;
+}
+
+.login {
+    border-radius: 5%;
+    background: rgb(0, 0, 0);
+    margin-top: 75px;
+    padding: 3px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+input[type="usuario"],
+input[type="password"] {
+    font-size: 25px;
+    width: 95%;
+    padding: 10px;
+    border: none;
+}
+
+.input-escuela {
+    margin-bottom: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.icon {
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.button {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: cadetblue;
+}
+
+p {
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: cadetblue;
+}
+
+@media(min-width:768px) {
+    .formulario {
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
