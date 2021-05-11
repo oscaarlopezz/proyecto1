@@ -16,19 +16,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
     <!-- ****** -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../css/stylescrear.css">
 </head>
 
 <body>
     <div class="container">
-    <form action="recibirdatos.php" method="get">
+    <form action="recibircrearAl.php" method="get">
     <div class="form-group">
     <br/>
-    <div class="row">
-        <div class="col-8">
+    <div class="form-row">
+        <div class="col-9">
             <label for="text">Nombre: </label>
             <input type="text" class="form-control" name="Nombre" size="40">
         </div>
-        <div class="col-2">
+        <div class="col">
                 <label for="usr">DNI: </label>
                 <input type="text" class="form-control" name="DNI" size="40">
         </div>
@@ -46,7 +47,7 @@
     <div class="row">
         <div class="form-group col-md-6">
             <label for="text">Correo: </label>
-            <input type="text" class="form-control" name="Correo" size="40">
+            <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
         </div>
         <div class="form-group col-md-4">
             <label for="text">Clase: </label>
@@ -57,9 +58,8 @@
             <input type="text" class="form-control" name="Telefono" size="40"></p>
         </div>
     </div>
-    
         <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" class="btn btn-warning" value="Enviar">
+            <input type="submit" class="btn btn-success" value="Enviar">
             <input type="reset" class="btn btn-danger" value="Borrar">
         </div>
         </p>

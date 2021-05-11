@@ -10,3 +10,8 @@
     display: none;
     /*no mostrar barra scroll pero funciona*/
 }
+body {
+    background: url(../img/crearAl.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
