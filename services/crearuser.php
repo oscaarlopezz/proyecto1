@@ -24,38 +24,40 @@
     <div class="form-group">
     <br/>
     <div class="row">
-        <p>
-            <label for="text">DNI: </label>
-            <input type="text" class="form-control" name="servidor" size="40">
-        </p>
-            <div class="col">
-                <label for="usr">Nombre: </label>
-                <input type="text" class="form-control" name="user" size="40">
-            </div>
+        <div class="col-8">
+            <label for="text">Nombre: </label>
+            <input type="text" class="form-control" name="Nombre" size="40">
+        </div>
+        <div class="col-2">
+                <label for="usr">DNI: </label>
+                <input type="text" class="form-control" name="DNI" size="40">
+        </div>
     </div>    
     <div class="row">
             <div class="col">
                 <label for="pwd">1º Apellido: </label>
-                <input type="text" class="form-control" name="passwd" size="40">
+                <input type="text" class="form-control" name="1r_Apellido" size="40">
             </div>
-        <p>
+        <div class="col">
             <label for="text">2º Apellido: </label>
-            <input type="text" class="form-control" name="bd" size="40"></p>
+            <input type="text" class="form-control" name="2o_Apellido" size="40">
+        </div>
     </div>
     <div class="row">
-            <div class="col">
-                <label for="pwd">Correo: </label>
-                <input type="text" class="form-control" name="passwd" size="40">
-            </div>
-        <p>
+        <div class="form-group col-md-6">
+            <label for="text">Correo: </label>
+            <input type="text" class="form-control" name="Correo" size="40">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="text">Clase: </label>
+            <input type="text" class="form-control" name="Clase" size="40"></p>
+        </div>
+        <div class="form-group col-md-2">
             <label for="text">Teléfono: </label>
-            <input type="text" class="form-control" name="bd" size="40"></p>
-        <p>
+            <input type="text" class="form-control" name="Telefono" size="40"></p>
+        </div>
     </div>
-    <p>
-        <label for="text">Clase: </label>
-        <input type="text" class="form-control" name="bd" size="40"></p>
-    <p>
+    
         <div class="col-sm-offset-2 col-sm-10">
             <input type="submit" class="btn btn-warning" value="Enviar">
             <input type="reset" class="btn btn-danger" value="Borrar">
