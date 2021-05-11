@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>Registrar Alumno</h1>
+    <h1>Registrar Profesor</h1>
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
@@ -28,13 +28,13 @@
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
-                    <div class="col-9">
+                    <div class="col-4">
                         <label for="text">Nombre: </label>
                         <input type="text" class="form-control" name="Nombre" size="40">
                     </div>
                     <div class="col">
-                            <label for="usr">DNI: </label>
-                            <input type="text" class="form-control" name="DNI" size="40">
+                            <label for="usr">Correo: </label>
+                            <input type="text" class="form-control" name="DNI" placeholder="user@ejemplo.com" size="40">
                     </div>
                 </div>    
                 <div class="row">
@@ -47,25 +47,26 @@
                         <input type="text" class="form-control" name="2o_Apellido" size="40">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="text">Correo: </label>
-                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="text">Clase: </label>
-                        <input type="text" class="form-control" name="Clase" size="40">
-                    </div>
-                    <div class="form-group col-md-2">
+                <div class="form-row">
+                    <div class="col-4">
                         <label for="text">Teléfono: </label>
-                        <input type="text" class="form-control" name="Telefono" size="40">
+                        <input type="email" class="form-control" name="Teléfono" size="40">
+                    </div>
+                    <div class="col">
+                        <label for="inputState">Departamento</label>
+                        <select id="inputState" class="form-control" placeholder="Selecciona el Departamento">
+                            <option selected>Elige un Departamento</option>
+                            <option>DIT</option>
+                            <option>BATX</option>
+                            <option>EAS</option>
+                            <option>CAFEM</option>
+                        </select>
                     </div>
                 </div>
                     <div class="col-sm-offset-2 col-sm-10">
                         <input type="submit" class="btn btn-success" value="Enviar">
                         <input type="reset" class="btn btn-danger" value="Borrar">
                     </div>
-                    </p>
                 </div>
                 </form>
             </div>
