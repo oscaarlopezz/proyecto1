@@ -64,7 +64,7 @@ $sql="INSERT INTO tbl_alumne
 VALUES ('47864649Q','Oscar','Lopez','Moreno','647474823','oscarlopez@gmail.com','Asix1')";
 */
 
-INSERT INTO IF `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`) VALUES ('47864649Q', 'Oscar', 'Lopez', 'Moreno', '636925502', 'oscarlopez@gmail.com');
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('47864649Q', 'Oscar', 'Lopez', 'Moreno', '636925502', 'oscarlopez@gmail.com', 1);
 
 INSERT INTO `tbl_dept` (`codi_dept`, `nom_dept`) VALUES ('34543','DIT');
 
