@@ -12,11 +12,13 @@
 <body>
     <br>
     <form action="recibircrear.php" method="POST">
-        <p>Nombre: <input type="text" name="nombre" size="40"></p>
-        <p>Apellido: <input type="text" name="apellido" size="40"></p>
-        <p>Curso: <input type="text" name="curso" size="40"></p>
-        <p>Grupo: <input type="text" name="grupo" size="40"></p>
-        <p>Edad: <input type="text" name="edad" size="40"></p>
+        <p>DNI: <input type="text" name="DNI" size="40"></p>
+        <p>Nombre: <input type="text" name="Nombre" size="40"></p>
+        <p>1r Apellido: <input type="text" name="1r_Apellido" size="40"></p>
+        <p>2o Apellido: <input type="text" name="2o_Apellido" size="40"></p>
+        <p>Telefono: <input type="text" name="Telefono" size="40"></p>
+        <p>Correo: <input type="text" name="Correo" size="40"></p>
+        <p>Clase: <input type="text" name="Clase" size="40"></p>
             <p>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Borrar">
