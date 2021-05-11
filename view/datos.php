@@ -24,8 +24,14 @@ include_once '../services/conexion.php';
     <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
-    <div class="two-columns">
-    <input type="submit" value="Crear" name='crearuser' class="button" href="../services/crearuser.php">
+<div class="boton">
+    <a href="../services/crearuser.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
+    <div class="boton2">
+        <a href="../services/actualizaruser.php" class="btn btn-warning" role="button" aria-pressed="true">Actualizar</a>
+        <a href="../services/eliminaruser.php" class="btn btn-danger" role="button" aria-pressed="true">Eliminar</a>
+    </div>
+</div>
+
 <?php
      // Check connection
      if (!$conexion) {
@@ -62,6 +68,17 @@ include_once '../services/conexion.php';
          <?php } ?>
  </table>
 </div>
+<div class="nav">
+    <a href="../services/actualizaruser.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
+</div>
+<div class="nav">
+    <a href="../services/eliminaruser.php" class="btn btn-info" role="button" aria-pressed="true">Clases</a>
+</div>
+<div class="nav">
+    <a href="../services/eliminaruser.php" class="btn btn-info" role="button" aria-pressed="true">Departamentos</a>
+</div>
+
+
  <?mysqli_close($conexion);?>
  <?
 /*    
