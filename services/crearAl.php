@@ -21,51 +21,54 @@
 
 <body>
     <div class="container">
-    <form action="recibircrearAl.php" method="get">
-    <div class="form-group">
-    <br/>
-    <div class="form-row">
-        <div class="col-9">
-            <label for="text">Nombre: </label>
-            <input type="text" class="form-control" name="Nombre" size="40">
-        </div>
-        <div class="col">
-                <label for="usr">DNI: </label>
-                <input type="text" class="form-control" name="DNI" size="40">
-        </div>
-    </div>    
-    <div class="row">
-            <div class="col">
-                <label for="pwd">1º Apellido: </label>
-                <input type="text" class="form-control" name="1r_Apellido" size="40">
+        <div class="fondo">
+            <div class="fondo2">
+                <form action="recibircrearAl.php" method="get">
+                <div class="form-group">
+                <br/>
+                <div class="form-row">
+                    <div class="col-9">
+                        <label for="text">Nombre: </label>
+                        <input type="text" class="form-control" name="Nombre" size="40">
+                    </div>
+                    <div class="col">
+                            <label for="usr">DNI: </label>
+                            <input type="text" class="form-control" name="DNI" size="40">
+                    </div>
+                </div>    
+                <div class="row">
+                        <div class="col">
+                            <label for="pwd">1º Apellido: </label>
+                            <input type="text" class="form-control" name="1r_Apellido" size="40">
+                        </div>
+                    <div class="col">
+                        <label for="text">2º Apellido: </label>
+                        <input type="text" class="form-control" name="2o_Apellido" size="40">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="text">Correo: </label>
+                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="text">Clase: </label>
+                        <input type="text" class="form-control" name="Clase" size="40"></p>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="text">Teléfono: </label>
+                        <input type="text" class="form-control" name="Telefono" size="40"></p>
+                    </div>
+                </div>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" class="btn btn-success" value="Enviar">
+                        <input type="reset" class="btn btn-danger" value="Borrar">
+                    </div>
+                    </p>
+                </div>
+                </form>
             </div>
-        <div class="col">
-            <label for="text">2º Apellido: </label>
-            <input type="text" class="form-control" name="2o_Apellido" size="40">
         </div>
     </div>
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="text">Correo: </label>
-            <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="text">Clase: </label>
-            <input type="text" class="form-control" name="Clase" size="40"></p>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="text">Teléfono: </label>
-            <input type="text" class="form-control" name="Telefono" size="40"></p>
-        </div>
-    </div>
-        <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" class="btn btn-success" value="Enviar">
-            <input type="reset" class="btn btn-danger" value="Borrar">
-        </div>
-        </p>
-    </div>
-    </form>
-</div>
-
 </body>
-</body>
+</html>
