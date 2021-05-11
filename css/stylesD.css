@@ -11,5 +11,21 @@
     /*no mostrar barra scroll pero funciona*/
 }
 .table {
-    padding: 2% 5%;
+    padding: 1% 5%;
 }
+.boton {
+    padding: 1% 5%;
+}
+.boton2 {
+    float: right;
+}
+.container-fluid {
+    display: flex;
+    justify-content: center;
+  }
+.nav {
+    padding-left: 20%;
+    float: left;
+
+}
+

@@ -13,7 +13,7 @@
 
 <body>
     <br>
-    <form action="datos.php" method="POST">
+    <form action="recibircrear.php" method="POST">
         <p>Nombre: <input type="text" name="nombre" size="40"></p>
         <p>Apellido: <input type="text" name="apellido" size="40"></p>
         <p>Curso: <input type="text" name="curso" size="40"></p>
