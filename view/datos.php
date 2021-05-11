@@ -21,7 +21,7 @@ include_once '../services/conexion.php';
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
     <!-- ****** -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="../css/stylesdatos.css">
+    <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
     <div class="two-columns">
@@ -31,35 +31,37 @@ include_once '../services/conexion.php';
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
-     $sql="select * from emp";
+     $sql="select * from tbl_alumne";
      $result=mysqli_query($conexion,$sql);
  ?>
- <table class="table table-bordered">
-         <tr class="active">
-             <th>EMPNO</th>
-             <th>ENAME</th>
-             <th>JOB</th>
-             <th>MGR</th>
-             <th>HIREDATE</th>
-             <th>SAL</th>
-             <th>COMM</th>
-             <th>DEPTNO</th>
-         </tr>
+<div class="table">
+<table class="table table-striped">
+        <thead class="table-dark">
+             <th>Id Alumno</th>
+             <th>DNI</th>
+             <th>Nombre</th>
+             <th>1r Apellido</th>
+             <th>2o Apellido</th>
+             <th>Teléfono</th>
+             <th>Correo</th>
+             <th>Clase</th>
+        </thead>
          <?php
              foreach ($result as $registro){
          ?>
              <tr>
-                 <td><?php echo "{$registro['empno']}";?></td>
-                 <td><?php echo "{$registro['ename']}";?></td>
-                 <td><?php echo "{$registro['job']}";?></td>
-                 <td><?php echo "{$registro['mgr']}";?></td>
-                 <td><?php echo "{$registro['hiredate']}";?></td>
-                 <td><?php echo "{$registro['sal']}"?></td>
-                 <td><?php echo "{$registro['comm']}"?></td>
-                 <td><?php echo "{$registro['deptno']}"?></td>
+                 <td><?php echo "{$registro['id_alumne']}";?></td>
+                 <td><?php echo "{$registro['dni_alu']}";?></td>
+                 <td><?php echo "{$registro['nom_alu']}";?></td>
+                 <td><?php echo "{$registro['cognom1_alu']}";?></td>
+                 <td><?php echo "{$registro['cognom2_alu']}";?></td>
+                 <td><?php echo "{$registro['telf_alu']}"?></td>
+                 <td><?php echo "{$registro['email_alu']}"?></td>
+                 <td><?php echo "{$registro['classe']}"?></td>
              </tr>
          <?php } ?>
  </table>
+</div>
  <?mysqli_close($conexion);?>
  <?
 /*    
