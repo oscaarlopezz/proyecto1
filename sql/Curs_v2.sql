@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS tbl_alumne(
 	cognom2_alu varchar(20) NULL,
 	telf_alu varchar(9) NULL,
 	email_alu varchar(50) NULL,
-	classe int(5) NOT NULL,
+	classe int(5) NULL,
 	constraint pk_alumne PRIMARY KEY (id_alumne)
 );
 
@@ -56,3 +56,18 @@ ALTER TABLE tbl_classe
 ALTER TABLE tbl_professor
     ADD CONSTRAINT prof_dept_fk FOREIGN KEY (dept)
     REFERENCES tbl_dept(id_dept);
+
+
+/* INSERTS PRIMERS USUARIS
+$sql="INSERT INTO tbl_alumne 
+(dni_alu, nom_alu, cognom1_alu, cognom2_alu, telf_alu, email_alu, classe) 
+VALUES ('47864649Q','Oscar','Lopez','Moreno','647474823','oscarlopez@gmail.com','Asix1')";
+*/
+
+INSERT INTO IF `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`) VALUES ('47864649Q', 'Oscar', 'Lopez', 'Moreno', '636925502', 'oscarlopez@gmail.com');
+
+INSERT INTO IF NOT `tbl_dept` (`codi_dept`, `nom_dept`) VALUES ('34543','DIT');
+
+INSERT INTO IF NOT `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_prof`,`telf`,`dept`) VALUES ('Gerard','Orobitg','Boyer','gerard.orobitg@fje.edu','6734','1');
+
+INSERT INTO `tbl_classe` (`codi_classe`, `nom_classe`, `tutor`) VALUES ('ASIX1','Aula312','1');
