@@ -1,10 +1,7 @@
 <?php
 //if (isset($_GET['login'])){
 //    session_start();
-<<<<<<< HEAD
 include_once '../services/conexion.php';
-=======
->>>>>>> 9724de87e02ca00d1dcbcdce077b363b2f936545
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,23 +18,12 @@ include_once '../services/conexion.php';
     <div class="two-columns">
     <input type="submit" value="Crear" name='crearuser' class="button" href="../services/crearuser.php">
 <?php
-<<<<<<< HEAD
      // Check connection
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
      $sql="select * from emp";
      $result=mysqli_query($conexion,$sql);
-=======
-     // Create connection
-     $conn = mysqli_connect(127.0.0.1, sergi, 00zn754n, empresa);
-     // Check connection
-     if (!$conn) {
-         die("Connection failed: " . mysqli_connect_error());
-     }
-     $sql="select * from emp";
-     $result=mysqli_query($conn,$sql);
->>>>>>> 9724de87e02ca00d1dcbcdce077b363b2f936545
  ?>
  <table class="table table-bordered">
          <tr class="active">
@@ -65,11 +51,7 @@ include_once '../services/conexion.php';
              </tr>
          <?php } ?>
  </table>
-<<<<<<< HEAD
  <?mysqli_close($conexion);?>
-=======
- <?mysqli_close($conn);?>
->>>>>>> 9724de87e02ca00d1dcbcdce077b363b2f936545
  <?
 /*    
     else{
