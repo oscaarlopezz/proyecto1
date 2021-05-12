@@ -5,25 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- ********* -->
+    <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <!-- ****** -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../css/stylescrear.css">
     <title>Formulario de entrada del dato</title>
 </head>
 
 <body>
-    <br>
-    <form action="recibircrear.php" method="POST">
-        <p>DNI: <input type="text" name="DNI" size="40"></p>
-        <p>Nombre: <input type="text" name="Nombre" size="40"></p>
-        <p>1r Apellido: <input type="text" name="1r_Apellido" size="40"></p>
-        <p>2o Apellido: <input type="text" name="2o_Apellido" size="40"></p>
-        <p>Telefono: <input type="text" name="Telefono" size="40"></p>
-        <p>Correo: <input type="text" name="Correo" size="40"></p>
-        <p>Clase: <input type="text" name="Clase" size="40"></p>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
-            </p>
-        </p>
-    </form>
+    <div class="cr">
+        <br>
+    </div>
+    <div class="cr">
+        <a href="../services/crearAl.php" class="btn btn-info" role="button" aria-pressed="true">Crear Alumno</a>
+        <br>        <br>
+        <a href="../services/crearPr.php" class="btn btn-info" role="button" aria-pressed="true">Crear Profesor</a>
+        <br>        <br>
+        <a href="../services/creardept.php" class="btn btn-info" role="button" aria-pressed="true">Crear Departament</a>
+        <br>        <br>
+        <a href="../services/crearclases.php" class="btn btn-info" role="button" aria-pressed="true">Crear Clase</a>
+    </div>
 </body>
-</body>
+</html>

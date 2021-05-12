@@ -27,7 +27,7 @@ include_once '../services/conexion.php';
 <div class="back">
 
 <div class="nav">
-    <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
+    <a href="datos.php" class="btn btn-info" role="button" aria-pressed="true">Alumnos</a>
 </div>
 <div class="nav">
     <a href="datosCl.php" class="btn btn-info" role="button" aria-pressed="true">Clases</a>
@@ -41,20 +41,19 @@ include_once '../services/conexion.php';
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
-     $sql="select * from tbl_alumne";
+     $sql="select * from tbl_professor";
      $result=mysqli_query($conexion,$sql);
  ?>
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
-             <th>Id Alumno</th>
-             <th>DNI</th>
+             <th>Id Profesor</th>
              <th>Nombre</th>
              <th>1r Apellido</th>
              <th>2o Apellido</th>
-             <th>Teléfono</th>
              <th>Correo</th>
-             <th>Clase</th>
+             <th>Teléfono</th>
+             <th>Departamento</th>
              <th>⠀</th>
              <th>⠀</th>
         </thead>
@@ -62,14 +61,13 @@ include_once '../services/conexion.php';
              foreach ($result as $registro){
          ?>
              <tr>
-                 <td><?php echo "{$registro['id_alumne']}";?></td>
-                 <td><?php echo "{$registro['dni_alu']}";?></td>
-                 <td><?php echo "{$registro['nom_alu']}";?></td>
-                 <td><?php echo "{$registro['cognom1_alu']}";?></td>
-                 <td><?php echo "{$registro['cognom2_alu']}";?></td>
-                 <td><?php echo "{$registro['telf_alu']}"?></td>
-                 <td><?php echo "{$registro['email_alu']}"?></td>
-                 <td><?php echo "{$registro['classe']}"?></td>
+                 <td><?php echo "{$registro['id_professor']}";?></td>
+                 <td><?php echo "{$registro['nom_prof']}";?></td>
+                 <td><?php echo "{$registro['cognom1_prof']}";?></td>
+                 <td><?php echo "{$registro['cognom2_prof']}";?></td>
+                 <td><?php echo "{$registro['email_prof']}";?></td>
+                 <td><?php echo "{$registro['telf']}"?></td>
+                 <td><?php echo "{$registro['dept']}"?></td>
                  <td><?php echo "<a href='../services/actualizaruser.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminaruser.php' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
@@ -95,6 +93,3 @@ include_once '../services/conexion.php';
 </div>
 </body>
 </html>
-
-
-

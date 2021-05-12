@@ -33,7 +33,7 @@ $result=mysqli_query($conexion,$sql);
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearAl.php" method="get">
+                <form action="recibircrearPr.php" method="get">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -63,9 +63,9 @@ $result=mysqli_query($conexion,$sql);
                     </div>
                     <div class="col">
                         <label for="inputState">Departamento</label>
-                        <select id="[id]"> 
+                        <select class="form-control" name="Departamento"  id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
-                            <option class="form-control" name="Departamento" size="40" value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
+                            <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
                         <?php } ?>
                         </select>
                     </div>

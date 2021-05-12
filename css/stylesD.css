@@ -10,22 +10,29 @@
     display: none;
     /*no mostrar barra scroll pero funciona*/
 }
+
+body {
+    background: url(../img/datos.jpg);
+}
+
 .table {
     padding: 1% 5%;
 }
+
 .boton {
     padding: 1% 5%;
 }
-.boton2 {
-    float: right;
-}
+
 .container-fluid {
     display: flex;
     justify-content: center;
-  }
-.nav {
-    padding-left: 20%;
-    float: left;
-
 }
 
+.nav {
+    float: left;
+    padding: 3% 0 1% 20%;
+}
+
+.table td {
+    background-color: white;
+}

@@ -13,5 +13,5 @@ require_once 'conexion.php';
 $sql="INSERT INTO `tbl_alumno` (`id_alumne`,`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telef_alu`, `email_alu`, `clase`) VALUES ('$DNI','$Nombre','$Apellidio1','$Apellido2','$Telefono','$Correo', '$Clase')";
 mysqli_query($conexion,$sql);
 
-header("Location:ej20.php");
+header("Location:../view/datos.php");
 echo $sql;
