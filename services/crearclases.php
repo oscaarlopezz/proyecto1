@@ -28,7 +28,7 @@
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
-                    <div class="col-9">
+                    <div class="col-6">
                         <label for="text">Codigo clase: </label>
                         <input type="text" class="form-control" name="codi_classe" size="40">
                     </div>

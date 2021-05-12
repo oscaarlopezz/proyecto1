@@ -32,7 +32,7 @@
                         <label for="text">Codigo Departamento: </label>
                         <input type="number" class="form-control" name="codi_dept" size="40">
                     </div>
-                    <div class="col-9">
+                    <div class="col-6">
                             <label for="usr">Nombre Departamento: </label>
                             <input type="text" class="form-control" name="nom_dept" size="40">
                     </div>
