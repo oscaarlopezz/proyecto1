@@ -59,7 +59,7 @@
                             <option>DIT</option>
                             <option>BATX</option>
                             <option>EAS</option>
-                            <option>CAFEM</option>
+                            <option>CAFEMN</option>
                         </select>
                     </div>
                 </div>
