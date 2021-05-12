@@ -25,7 +25,7 @@ include_once '../services/conexion.php';
 </head>
 <body>
 <div class="boton">
-    <a href="../services/crearuser.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
+    <a href="../services/crear.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
     <div class="boton2">
         <a href="../services/actualizaruser.php" class="btn btn-warning" role="button" aria-pressed="true">Actualizar</a>
         <a href="../services/eliminaruser.php" class="btn btn-danger" role="button" aria-pressed="true">Eliminar</a>
