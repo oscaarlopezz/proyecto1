@@ -24,6 +24,7 @@ include_once '../services/conexion.php';
     <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
+<div class="back">
 <div class="boton">
     <a href="../services/crear.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
     <div class="boton2">
@@ -51,6 +52,8 @@ include_once '../services/conexion.php';
              <th>Teléfono</th>
              <th>Correo</th>
              <th>Clase</th>
+             <th>⠀</th>
+             <th>⠀</th>
         </thead>
          <?php
              foreach ($result as $registro){
@@ -64,6 +67,8 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['telf_alu']}"?></td>
                  <td><?php echo "{$registro['email_alu']}"?></td>
                  <td><?php echo "{$registro['classe']}"?></td>
+                 <td><?php echo "<a href='../services/actualizaruser.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
+                 <td><?php echo "<a href='../services/eliminaruser.php' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
          <?php } ?>
  </table>
@@ -90,5 +95,6 @@ include_once '../services/conexion.php';
 }
 */
 ?>
+</div>
 </body>
 </html>

@@ -10,6 +10,10 @@
     display: none;
     /*no mostrar barra scroll pero funciona*/
 }
+body {
+    background: url(../img/datos.jpg);
+
+}
 .table {
     padding: 1% 5%;
 }
@@ -27,5 +31,8 @@
     padding-left: 20%;
     float: left;
 
+}
+.table td {
+    background-color: white;
 }
 
