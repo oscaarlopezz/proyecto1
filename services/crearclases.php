@@ -39,7 +39,7 @@
                 </div>    
                 <div class="row">
                         <div class="col">
-                            <label for="pwd">tutor: </label>
+                            <label for="pwd">Tutor: </label>
                             <input type="text" class="form-control" name="tutor" size="40">
                         </div>
                 </div>
