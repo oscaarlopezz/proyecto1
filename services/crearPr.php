@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="../css/stylescrear.css">
 </head>
 
+<?php
+include_once '../services/conexion.php';
+?>
+
+
+<?php $sql="SELECT * FROM tbl_dept";
+$result=mysqli_query($conexion,$sql);
+?>
+
 <body>
     <h1>Registrar Profesor</h1>
     <div class="container">
@@ -54,12 +63,10 @@
                     </div>
                     <div class="col">
                         <label for="inputState">Departamento</label>
-                        <select id="inputState" class="form-control" placeholder="Selecciona el Departamento">
-                            <option selected>Elige un Departamento</option>
-                            <option>DIT</option>
-                            <option>BATX</option>
-                            <option>EAS</option>
-                            <option>CAFEMN</option>
+                        <select id="[id]"> 
+                        <?php foreach ($result as $linea){ ?>
+                            <option class="form-control" name="Departamento" size="40" value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
+                        <?php } ?>
                         </select>
                     </div>
                 </div>

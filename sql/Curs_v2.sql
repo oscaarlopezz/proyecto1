@@ -66,8 +66,10 @@ VALUES ('47864649Q','Oscar','Lopez','Moreno','647474823','oscarlopez@gmail.com',
 
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('47864649Q', 'Oscar', 'Lopez', 'Moreno', '636925502', 'oscarlopez@gmail.com', 1);
 
-INSERT INTO `tbl_dept` (`codi_dept`, `nom_dept`) VALUES ('34543','DIT');
+INSERT INTO `tbl_dept` (`codi_dept`, `nom_dept`) VALUES ('31243','Prueba');
 
 INSERT INTO `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_prof`,`telf`,`dept`) VALUES ('Gerard','Orobitg','Boyer','gerard.orobitg@fje.edu','6734','1');
 
 INSERT INTO `tbl_classe` (`codi_classe`, `nom_classe`, `tutor`) VALUES ('ASIX1','Aula312','1');
+
+delete from tbl_alumne where id_alumne=1;
