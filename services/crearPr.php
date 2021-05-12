@@ -33,37 +33,37 @@ $result=mysqli_query($conexion,$sql);
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearPr.php" method="get">
+                <form action="recibircrearprof.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
                     <div class="col-4">
                         <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="Nombre" size="40">
+                        <input type="text" class="form-control" name="nom_Prof" size="40">
                     </div>
                     <div class="col">
                             <label for="usr">Correo: </label>
-                            <input type="text" class="form-control" name="DNI" placeholder="user@ejemplo.com" size="40">
+                            <input type="email" class="form-control" name="email_prof" placeholder="user@ejemplo.com" size="40">
                     </div>
                 </div>    
                 <div class="row">
                         <div class="col">
                             <label for="pwd">1º Apellido: </label>
-                            <input type="text" class="form-control" name="1r_Apellido" size="40">
+                            <input type="text" class="form-control" name="cognom1_prof" size="40">
                         </div>
                     <div class="col">
                         <label for="text">2º Apellido: </label>
-                        <input type="text" class="form-control" name="2o_Apellido" size="40">
+                        <input type="text" class="form-control" name="cognom2_prof" size="40">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-4">
                         <label for="text">Teléfono: </label>
-                        <input type="email" class="form-control" name="Teléfono" size="40">
+                        <input type="text" class="form-control" name="Telefono_prof" size="40">
                     </div>
                     <div class="col">
                         <label for="inputState">Departamento</label>
-                        <select class="form-control" name="Departamento"  id="[id]"> 
+                        <select class="form-control" name="dept"  id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
                             <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
                         <?php } ?>

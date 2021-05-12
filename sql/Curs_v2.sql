@@ -68,7 +68,7 @@ INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `t
 
 INSERT INTO `tbl_dept` (`codi_dept`, `nom_dept`) VALUES ('31243','Prueba');
 
-INSERT INTO `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_prof`,`telf`,`dept`) VALUES ('Gerard','Orobitg','Boyer','gerard.orobitg@fje.edu','6734','1');
+INSERT INTO `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_prof`,`telf`,`dept`) VALUES ('Danny','Larrea','Nomelose','danny.orobitg@fje.edu','6734','1');
 
 INSERT INTO `tbl_classe` (`codi_classe`, `nom_classe`, `tutor`) VALUES ('ASIX1','Aula312','1');
 
