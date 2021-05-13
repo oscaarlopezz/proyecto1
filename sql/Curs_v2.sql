@@ -73,3 +73,13 @@ INSERT INTO `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_pr
 INSERT INTO `tbl_classe` (`codi_classe`, `nom_classe`, `tutor`) VALUES ('ASIX1','Aula312','1');
 
 delete from tbl_alumne where id_alumne=1;
+
+CREATE TABLE IF NOT EXISTS tbl_admin(
+	id_admin int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	email_admin varchar(50) NOT NULL,
+	pass_admin varchar(20) NOT NULL
+);
+
+INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'sergi@gmail.com','00zn754n');
+INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'tosky@gmail.com','1234');
+INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'oscar@gmail.com','1234');

@@ -17,13 +17,13 @@
 <body>
     <div class="blur">
         <div class="blur2">
-        <form class="login">
+        <form class="login" METHOD='POST' ACTION='../services/comprobaruser.php'>
 
             <h1>LOGIN</h1>
             <div class="escuela">
                 <div class="input-escuela">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" name='usuario' required VALUE='' placeholder="Usuario">
+                    <input type="text" name='user' required VALUE='' placeholder="Usuario">
                 </div>  
                 <div class="input-escuela">
                     <i class="fas fa-key icon"></i>
@@ -31,7 +31,7 @@
                     <br>
                     <br>
                 </div>
-                <input type="submit" value="Iniciar Sesión" name='login' class="button" href="datos.php">
+                <input type="submit" value="Iniciar Sesión" name='login' class="button">
             </div>
         </form>
     </div>
