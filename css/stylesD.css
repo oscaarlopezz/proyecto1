@@ -37,3 +37,30 @@ body {
 .table td {
     background-color: white;
 }
+@media screen and (max-width:800px) {
+    * {
+        overflow-x: scroll;
+    }
+    .table {
+        width: 100%;
+        font-size: 6vw;
+        padding: 0;
+    }
+    .table th {
+        width: 5%;
+    }
+    .table td {
+        width: 5%;
+        /* padding: 5% 10%; */
+    }
+    .nav {
+        float: left;
+        padding: 6% 2%;
+        width: 33%;
+    }
+    .nav a {
+        font-size: 4.6vw;
+        padding: 4%;
+        height: 10%;
+    }
+}

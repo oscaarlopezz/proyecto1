@@ -24,7 +24,7 @@
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearDep.php" method="get">
+                <form action="recibircrearDept.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -33,7 +33,7 @@
                         <input type="number" class="form-control" name="codi_dept" size="40">
                     </div>
                     <div class="col-6">
-                            <label for="usr">Nombre Departamento: </label>
+                            <label for="text">Nombre Departamento: </label>
                             <input type="text" class="form-control" name="nom_dept" size="40">
                     </div>
                 </div>    

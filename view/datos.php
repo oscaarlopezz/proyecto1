@@ -24,7 +24,6 @@ include_once '../services/conexion.php';
     <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
-<div class="back">
 
 <div class="nav">
     <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
@@ -35,7 +34,6 @@ include_once '../services/conexion.php';
 <div class="nav">
     <a href="datosDe.php" class="btn btn-info" role="button" aria-pressed="true">Departamentos</a>
 </div>
-
 <?php
      // Check connection
      if (!$conexion) {
