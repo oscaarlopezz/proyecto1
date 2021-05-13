@@ -1,7 +1,6 @@
 <?php
 
-$DNI=$_POST['DNI'];
-$Nombre=$_POST['Nombre'];
+$Nombre=$_POST['nom_pr'];
 $Apellido1=$_POST['1r_Apellido'];
 $Apellido2=$_POST['2o_Apellido'];
 $Telefono=$_POST['Telefono'];

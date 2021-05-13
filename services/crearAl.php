@@ -61,7 +61,7 @@ $result=mysqli_query($conexion,$sql);
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Clase: </label>
-                        <select class="form-control" name="classe"  id="[id]"> 
+                        <select class="form-control" name="Classe"  id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
                             <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
                         <?php } ?>
@@ -76,7 +76,6 @@ $result=mysqli_query($conexion,$sql);
                         <input type="submit" class="btn btn-success" value="Enviar">
                         <input type="reset" class="btn btn-danger" value="Borrar">
                     </div>
-                    </p>
                 </div>
                 </form>
             </div>

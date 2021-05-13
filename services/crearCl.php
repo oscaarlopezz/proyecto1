@@ -30,11 +30,11 @@
                 <div class="form-row">
                     <div class="col-6">
                         <label for="text">Codigo clase: </label>
-                        <input type="text" class="form-control" name="codi_classe" size="40">
+                        <input type="text" class="form-control" name="codi_clase" size="40">
                     </div>
                     <div class="col">
                             <label for="usr">Nombre clase : </label>
-                            <input type="text" class="form-control" name="nom_classe" size="40">
+                            <input type="text" class="form-control" name="nom_clase" size="40">
                     </div>
                 </div>    
                 <div class="row">

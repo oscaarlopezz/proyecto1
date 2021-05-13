@@ -39,7 +39,7 @@ $result=mysqli_query($conexion,$sql);
                 <div class="form-row">
                     <div class="col-4">
                         <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="nom_Prof" size="40">
+                        <input type="text" class="form-control" name="nom_pr" size="40">
                     </div>
                     <div class="col">
                             <label for="usr">Correo: </label>
