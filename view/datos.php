@@ -70,7 +70,7 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['telf_alu']}"?></td>
                  <td><?php echo "{$registro['email_alu']}"?></td>
                  <td><?php echo "{$registro['nom_classe']}"?></td>
-                 <td><?php echo "<a href='../services/actualizaruser.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
+                 <td><?php echo "<a href='../services/actualizarAl.php?id_alumne=".$registro['id_alumne']."' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminaralu.php?id_alumne=".$registro['id_alumne']."' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
          <?php } ?>
