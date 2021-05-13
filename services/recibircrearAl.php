@@ -10,7 +10,7 @@ $Clase=$_POST['Clase'];
 
 require_once 'conexion.php';
 
-$sql="INSERT INTO `tbl_alumno` (`id_alumne`,`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telef_alu`, `email_alu`, `clase`) VALUES ('$DNI','$Nombre','$Apellidio1','$Apellido2','$Telefono','$Correo', '$Clase')";
+$sql="INSERT INTO `tbl_alumno` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telef_alu`, `email_alu`, `clase`) VALUES ('$DNI','$Nombre','$Apellidio1','$Apellido2','$Telefono','$Correo', '$Clase')";
 mysqli_query($conexion,$sql);
 
 header("Location:../view/datos.php");

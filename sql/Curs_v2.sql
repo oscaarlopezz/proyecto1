@@ -83,3 +83,6 @@ CREATE TABLE IF NOT EXISTS tbl_admin(
 INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'sergi@gmail.com','00zn754n');
 INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'tosky@gmail.com','1234');
 INSERT INTO `tbl_admin` (`email_admin`, `pass_admin`) VALUES ( 'oscar@gmail.com','1234');
+
+
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('34564649Q', 'Austin', 'Baby', 'Ou', '697354856', 'austinbaby@gmail.com', 1);
