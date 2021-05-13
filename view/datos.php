@@ -41,8 +41,8 @@ include_once '../services/conexion.php';
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
-     $sql="select * from tbl_alumne";
-     $result=mysqli_query($conexion,$sql);
+    $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
+    $result=mysqli_query($conexion,$sql);
  ?>
 <div class="table">
 <table class="table table-striped">
@@ -69,7 +69,7 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['cognom2_alu']}";?></td>
                  <td><?php echo "{$registro['telf_alu']}"?></td>
                  <td><?php echo "{$registro['email_alu']}"?></td>
-                 <td><?php echo "{$registro['classe']}"?></td>
+                 <td><?php echo "{$registro['nom_classe']}"?></td>
                  <td><?php echo "<a href='../services/actualizaruser.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminaralu.php?id_alumne=".$registro['id_alumne']."' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
