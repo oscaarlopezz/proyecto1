@@ -18,7 +18,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="../css/stylescrear.css">
 </head>
+<?php
+include_once '../services/conexion.php';
+?>
 
+
+<?php $sql="SELECT * FROM tbl_classe";
+$result=mysqli_query($conexion,$sql);
+?>
 <body>
     <h1>Registrar Alumno</h1>
     <div class="container">
@@ -53,8 +60,12 @@
                         <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="text">Clase: </label>
-                        <input type="text" class="form-control" name="Clase" size="40">
+                        <label for="inputState">Clase: </label>
+                        <select class="form-control" name="classe"  id="[id]"> 
+                        <?php foreach ($result as $linea){ ?>
+                            <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
+                        <?php } ?>
+                        </select>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="text">Teléfono: </label>
