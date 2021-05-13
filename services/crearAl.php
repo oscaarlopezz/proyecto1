@@ -35,7 +35,7 @@ $result=mysqli_query($conexion,$sql);
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
-                    <div class="col-9">
+                    <div class="col-7">
                         <label for="text">Nombre: </label>
                         <input type="text" class="form-control" name="Nombre" size="40">
                     </div>
