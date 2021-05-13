@@ -24,7 +24,7 @@
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearDep.php" method="get">
+                <form action="recibircrearDep.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">

@@ -63,7 +63,7 @@ $result=mysqli_query($conexion,$sql);
                     </div>
                     <div class="col">
                         <label for="inputState">Departamento</label>
-                        <select class="form-control" name="dept"  id="[id]"> 
+                        <select class="form-control" name="dept" id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
                             <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
                         <?php } ?>
