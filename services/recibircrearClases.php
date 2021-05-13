@@ -1,6 +1,6 @@
 <?php
 
-$CodiClase=$_POST['codigo_clase'];
+$CodiClase=$_POST['codi_clase'];
 $NomClase=$_POST['nom_clase'];
 $Tutor=$_POST['tutor'];
 

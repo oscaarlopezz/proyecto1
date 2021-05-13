@@ -19,12 +19,21 @@
     <link rel="stylesheet" href="../css/stylescrear.css">
 </head>
 
+<?php
+include_once '../services/conexion.php';
+?>
+
+
+<?php $sql="SELECT * FROM tbl_professor";
+$result=mysqli_query($conexion,$sql);
+?>
+
 <body>
     <h1>Registrar Clase</h1>
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearClases.php" method="get">
+                <form action="recibircrearClases.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -33,21 +42,24 @@
                         <input type="text" class="form-control" name="codi_clase" size="40">
                     </div>
                     <div class="col">
-                            <label for="usr">Nombre clase : </label>
+                            <label for="text">Nombre clase : </label>
                             <input type="text" class="form-control" name="nom_clase" size="40">
                     </div>
                 </div>    
                 <div class="row">
                         <div class="col">
-                            <label for="pwd">Tutor: </label>
-                            <input type="text" class="form-control" name="tutor" size="40">
+                        <label for="inputState">Tutor</label>
+                        <select class="form-control" name="tutor" id="[id]"> 
+                        <?php foreach ($result as $linea){ ?>
+                            <option value="<?php echo $linea['id_professor']; ?>" ><?php echo "{$linea['nom_prof']} {$linea['cognom1_prof']}"; ?></option>
+                        <?php } ?>
+                        </select>
                         </div>
                 </div>
                     <div class="col-sm-offset-2 col-sm-10">
                         <input type="submit" class="btn btn-success" value="Enviar">
                         <input type="reset" class="btn btn-danger" value="Borrar">
                     </div>
-                    </p>
                 </div>
                 </form>
             </div>
