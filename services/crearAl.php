@@ -61,7 +61,8 @@ $result=mysqli_query($conexion,$sql);
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Clase: </label>
-                        <select class="form-control" name="Classe"  id="[id]"> 
+                        <select class="form-control" name="Classe" id="[id]">
+                        <option active> Elije una opcion</option>
                         <?php foreach ($result as $linea){ ?>
                             <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
                         <?php } ?>

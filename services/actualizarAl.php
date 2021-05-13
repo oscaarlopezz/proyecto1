@@ -27,6 +27,9 @@ $id=$_REQUEST['id_alumne'];
 $result = mysqli_query($conexion,"SELECT * FROM `tbl_alumne` where `id_alumne`=$id");
 $alumno=mysqli_fetch_array($result);
 
+$sql="SELECT * FROM tbl_classe";
+$result=mysqli_query($conexion,$sql);
+
 ?>
 
 <body>
@@ -64,7 +67,7 @@ $alumno=mysqli_fetch_array($result);
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Clase: </label>
-                        <select class="form-control" name="Classe"  id="[id]"> 
+                        <select class="form-control" name="Classe" id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
                             <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
                         <?php } ?>

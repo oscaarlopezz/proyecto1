@@ -17,7 +17,7 @@ mysqli_query($conexion,$sql);
 
 header("Location:../view/datos.php");
 echo $sql;
-}
-else {
-    header("Location:../services/actualizarAl.php");
-}
+
+// else {
+//     header("Location:../services/actualizarAl.php");
+// }
