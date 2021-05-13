@@ -33,7 +33,7 @@ $result=mysqli_query($conexion,$sql);
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearprof.php" method="POST">
+                <form action="recibircrearPr.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -43,23 +43,23 @@ $result=mysqli_query($conexion,$sql);
                     </div>
                     <div class="col">
                             <label for="usr">Correo: </label>
-                            <input type="email" class="form-control" name="email_prof" placeholder="user@ejemplo.com" size="40">
+                            <input type="email" class="form-control" name="email_pr" placeholder="user@ejemplo.com" size="40">
                     </div>
                 </div>    
                 <div class="row">
                         <div class="col">
                             <label for="pwd">1º Apellido: </label>
-                            <input type="text" class="form-control" name="cognom1_prof" size="40">
+                            <input type="text" class="form-control" name="cognom1_pr" size="40">
                         </div>
                     <div class="col">
                         <label for="text">2º Apellido: </label>
-                        <input type="text" class="form-control" name="cognom2_prof" size="40">
+                        <input type="text" class="form-control" name="cognom2_pr" size="40">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-4">
                         <label for="text">Teléfono: </label>
-                        <input type="text" class="form-control" name="Telefono_prof" size="40">
+                        <input type="text" class="form-control" name="telf_pr" size="40">
                     </div>
                     <div class="col">
                         <label for="inputState">Departamento</label>

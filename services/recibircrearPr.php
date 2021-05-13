@@ -1,16 +1,16 @@
 <?php
 
-$Nombre=$_POST['nom_pr'];
-$Apellido1=$_POST['1r_Apellido'];
-$Apellido2=$_POST['2o_Apellido'];
-$Telefono=$_POST['Telefono'];
-$Correo=$_POST['Correo'];
-$Clase=$_POST['Classe'];
+$nombre=$_POST['nom_pr'];
+$apellido1=$_POST['cognom1_pr'];
+$apellido2=$_POST['cognom2_pr'];
+$telefono=$_POST['telf_pr'];
+$email=$_POST['email_pr'];
+$dept=$_POST['dept'];
 
 require_once 'conexion.php';
 
-$sql="INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('$DNI', '$Nombre', '$Apellido1', '$Apellido2', '$Telefono', '$Correo', '$Clase')";
+$sql="INSERT INTO `tbl_professor` (`nom_prof`, `cognom1_prof`,`cognom2_prof`,`email_prof`,`telf`,`dept`) VALUES ('$nombre', '$apellido1', '$apellido2', '$email', '$telefono', '$dept')";
 echo $sql;
 mysqli_query($conexion,$sql);
 
-header("Location:../view/datos.php");
+header("Location:../view/datosPr.php");
