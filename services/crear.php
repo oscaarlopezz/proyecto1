@@ -28,9 +28,9 @@
         <br>        <br>
         <a href="../services/crearPr.php" class="btn btn-info" role="button" aria-pressed="true">Crear Profesor</a>
         <br>        <br>
-        <a href="../services/creardept.php" class="btn btn-info" role="button" aria-pressed="true">Crear Departament</a>
+        <a href="../services/crearDe.php" class="btn btn-info" role="button" aria-pressed="true">Crear Departament</a>
         <br>        <br>
-        <a href="../services/crearclases.php" class="btn btn-info" role="button" aria-pressed="true">Crear Clase</a>
+        <a href="../services/crearCl.php" class="btn btn-info" role="button" aria-pressed="true">Crear Clase</a>
     </div>
 </body>
 </html>

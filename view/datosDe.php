@@ -47,8 +47,8 @@ include_once '../services/conexion.php';
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
-             <th>Id Alumno</th>
-             <th>DNI</th>
+             <th>Id Departamento</th>
+             <th>Codigo</th>
              <th>Nombre</th>
              <th>⠀</th>
              <th>⠀</th>

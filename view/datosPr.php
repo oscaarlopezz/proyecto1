@@ -41,7 +41,7 @@ include_once '../services/conexion.php';
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
-     $sql="select * from tbl_professor";
+     $sql="SELECT * FROM tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept";
      $result=mysqli_query($conexion,$sql);
  ?>
 <div class="table">
@@ -67,7 +67,7 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['cognom2_prof']}";?></td>
                  <td><?php echo "{$registro['email_prof']}";?></td>
                  <td><?php echo "{$registro['telf']}"?></td>
-                 <td><?php echo "{$registro['dept']}"?></td>
+                 <td><?php echo "{$registro['nom_dept']}"?></td>
                  <td><?php echo "<a href='../services/actualizarprof.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminarprof.php?id_professor=".$registro['id_professor']."' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
