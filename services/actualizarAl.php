@@ -25,6 +25,8 @@ require_once 'conexion.php';
 $id=$_REQUEST['id_alumne'];
 
 $result = mysqli_query($conexion,"SELECT * FROM `tbl_alumne` where `id_alumne`=$id");
+$alumno=mysqli_fetch_array($result);
+
 ?>
 
 <body>
@@ -32,33 +34,33 @@ $result = mysqli_query($conexion,"SELECT * FROM `tbl_alumne` where `id_alumne`=$
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibircrearAl.php" method="POST">
+                <form action="recibiractualizarAl.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
                     <div class="col-9">
                         <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="Nombre" size="40">
+                        <input type="text" class="form-control" name="Nombre" value="<?php echo $alumno['nom_alu'];?>" size="40">
                     </div>
                     <div class="col">
                             <label for="usr">DNI: </label>
-                            <input type="text" class="form-control" name="DNI" size="40">
+                            <input type="text" class="form-control" name="DNI" size="40" value="<?php echo $alumno['dni_alu'];?>" >
                     </div>
                 </div>    
                 <div class="row">
                         <div class="col">
                             <label for="pwd">1º Apellido: </label>
-                            <input type="text" class="form-control" name="1r_Apellido" size="40">
+                            <input type="text" class="form-control" name="1r_Apellido" size="40" value="<?php echo $alumno['cognom1_alu'];?>" >
                         </div>
                     <div class="col">
                         <label for="text">2º Apellido: </label>
-                        <input type="text" class="form-control" name="2o_Apellido" size="40">
+                        <input type="text" class="form-control" name="2o_Apellido" size="40" value="<?php echo $alumno['cognom2_alu'];?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="text">Correo: </label>
-                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40">
+                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40" value="<?php echo $alumno['email_alu'];?>">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Clase: </label>
@@ -70,7 +72,7 @@ $result = mysqli_query($conexion,"SELECT * FROM `tbl_alumne` where `id_alumne`=$
                     </div>
                     <div class="form-group col-md-2">
                         <label for="text">Teléfono: </label>
-                        <input type="text" class="form-control" name="Telefono" size="40">
+                        <input type="text" class="form-control" name="Telefono" size="40" value="<?php echo $alumno['telf_alu'];?>">
                     </div>
                 </div>
                     <div class="col-sm-offset-2 col-sm-10">
