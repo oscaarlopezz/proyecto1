@@ -31,6 +31,7 @@ $id=$_REQUEST['id_professor'];
 
 $result = mysqli_query($conexion,"SELECT * FROM `tbl_professor` where `id_professor`=$id");
 $alumno=mysqli_fetch_array($result);
+$result2=mysqli_query($conexion,$sql);
 
 ?>
 
@@ -41,7 +42,7 @@ $alumno=mysqli_fetch_array($result);
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="actualizarProf.php" method="POST">
+                <form action="recibiractualizarProf.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -72,7 +73,7 @@ $alumno=mysqli_fetch_array($result);
                     <div class="col">
                         <label for="inputState">Departamento</label>
                         <select class="form-control" name="dept" id="[id]"> 
-                        <?php foreach ($result as $linea){ ?>
+                        <?php foreach ($result2 as $linea){ ?>
                             <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
                         <?php } ?>
                         </select>

@@ -17,7 +17,7 @@ mysqli_query($conexion,$sql);
 
 
 
-header("Location:../view/datos.php");
+header("Location:../view/datosPr.php");
 echo $sql;
 
 // else {
