@@ -42,6 +42,7 @@ $result=mysqli_query($conexion,$sql);
                 <br/>
                 <div class="form-row">
                     <div class="col-9">
+                    <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>" size="40">
                         <label for="text">Nombre: </label>
                         <input type="text" class="form-control" name="Nombre" value="<?php echo $alumno['nom_alu'];?>" size="40">
                     </div>
