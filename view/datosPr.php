@@ -68,7 +68,7 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['email_prof']}";?></td>
                  <td><?php echo "{$registro['telf']}"?></td>
                  <td><?php echo "{$registro['nom_dept']}"?></td>
-                 <td><?php echo "<a href='../services/actualizarprof.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
+                 <td><?php echo "<a href='../services/actualizarprof.php?id_professor=".$registro['id_professor']."' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminarprof.php?id_professor=".$registro['id_professor']."' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
          <?php } ?>

@@ -15,6 +15,9 @@ $sql="UPDATE tbl_alumne SET dni_alu = '$DNI', nom_alu= '$Nombre', cognom1_alu= '
 WHERE  id_alumne=$id;";
 mysqli_query($conexion,$sql);
 
+
+
+
 header("Location:../view/datos.php");
 echo $sql;
 
