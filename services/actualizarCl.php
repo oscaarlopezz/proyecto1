@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<title>Crear Usuarios</title>
+<title>Actualizar Alumno</title>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Actualización Profesor</title>
+    <title>Actualiza la clase</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,61 +20,57 @@
 </head>
 
 <?php
-include_once '../services/conexion.php';
-?>
+require_once 'conexion.php';
 
+$id=$_REQUEST['id_classe'];
 
-<?php $sql="SELECT * FROM tbl_dept";
+$result = mysqli_query($conexion,"SELECT * FROM `tbl_classe` where `id_classe`=$id");
+$alumno=mysqli_fetch_array($result);
+
+$sql="SELECT * FROM tbl_classe";
 $result=mysqli_query($conexion,$sql);
 
-$id=$_REQUEST['id_professor'];
-
-$result = mysqli_query($conexion,"SELECT * FROM `tbl_professor` where `id_professor`=$id");
-$alumno=mysqli_fetch_array($result);
-$result2=mysqli_query($conexion,$sql);
 ?>
 
-
-
 <body>
-    <h1>Actualizar Profesor</h1>
+    <h1>Actualizar Alumno</h1>
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibiractualizarProf.php" method="POST">
+                <form action="recibiractualizarCl.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
-                    <div class="col-4">
+                    <div class="col-9">
                     <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>" size="40">
                         <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="nom_pr" size="40" value="<?php echo $alumno['nom_prof'];?>">
+                        <input type="text" class="form-control" name="Nombre" value="<?php echo $alumno['nom_alu'];?>" size="40">
                     </div>
                     <div class="col">
-                            <label for="usr">Correo: </label>
-                            <input type="email" class="form-control" name="email_pr" placeholder="user@ejemplo.com" size="40" value="<?php echo $alumno['email_prof'];?>">
+                            <label for="usr">DNI: </label>
+                            <input type="text" class="form-control" name="DNI" size="40" value="<?php echo $alumno['dni_alu'];?>" >
                     </div>
                 </div>    
                 <div class="row">
                         <div class="col">
                             <label for="pwd">1º Apellido: </label>
-                            <input type="text" class="form-control" name="cognom1_pr" size="40" value="<?php echo $alumno['cognom1_prof'];?>">
+                            <input type="text" class="form-control" name="1r_Apellido" size="40" value="<?php echo $alumno['cognom1_alu'];?>" >
                         </div>
                     <div class="col">
                         <label for="text">2º Apellido: </label>
-                        <input type="text" class="form-control" name="cognom2_pr" size="40" value="<?php echo $alumno['cognom2_prof'];?>">
+                        <input type="text" class="form-control" name="2o_Apellido" size="40" value="<?php echo $alumno['cognom2_alu'];?>">
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col-5">
-                        <label for="text">Teléfono: </label>
-                        <input type="text" class="form-control" name="telf_pr" size="40" value="<?php echo $alumno['telf'];?>">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="text">Correo: </label>
+                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40" value="<?php echo $alumno['email_alu'];?>">
                     </div>
-                    <div class="col">
-                        <label for="inputState">Departamento</label>
-                        <select class="form-control" name="dept" id="[id]"> 
-                        <?php foreach ($result2 as $linea){ ?>
-                            <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Clase: </label>
+                        <select class="form-control" name="Classe" id="[id]"> 
+                        <?php foreach ($result as $linea){ ?>
+                            <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
                         <?php } ?>
                         </select>
                     </div>
