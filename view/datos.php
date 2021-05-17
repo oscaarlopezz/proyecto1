@@ -28,11 +28,14 @@ include_once '../services/conexion.php';
 <div class="nav">
     <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
 </div>
-<div class="nav">
+<div class="nav2">
     <a href="datosCl.php" class="btn btn-info" role="button" aria-pressed="true">Clases</a>
 </div>
-<div class="nav">
+<div class="nav2">
     <a href="datosDe.php" class="btn btn-info" role="button" aria-pressed="true">Departamentos</a>
+</div>
+<div class="logout">
+    <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
 </div>
 <?php
      // Check connection
@@ -76,6 +79,9 @@ include_once '../services/conexion.php';
 </div>
 <div class="boton">
     <a href="../services/crear.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
+</div>
+<div class="csv">
+    <a href="../services/CSV/csvAl.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
 
 
