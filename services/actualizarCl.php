@@ -22,18 +22,23 @@
 <?php
 require_once 'conexion.php';
 
+?>
+
+<?php $sql="SELECT * FROM tbl_professor";
+$result=mysqli_query($conexion,$sql);
+
 $id=$_REQUEST['id_classe'];
 
 $result = mysqli_query($conexion,"SELECT * FROM `tbl_classe` where `id_classe`=$id");
 $alumno=mysqli_fetch_array($result);
-
-$sql="SELECT * FROM tbl_classe";
-$result=mysqli_query($conexion,$sql);
-
+$result2=mysqli_query($conexion,$sql);
 ?>
 
+
+
+
 <body>
-    <h1>Actualizar Alumno</h1>
+    <h1>Actualizar Clase</h1>
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
@@ -43,34 +48,19 @@ $result=mysqli_query($conexion,$sql);
                 <div class="form-row">
                     <div class="col-9">
                     <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>" size="40">
-                        <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="Nombre" value="<?php echo $alumno['nom_alu'];?>" size="40">
+                        <label for="text">Código Clase: </label>
+                        <input type="text" class="form-control" name="Codigo" value="<?php echo $alumno['codi_classe'];?>" size="40">
                     </div>
                     <div class="col">
-                            <label for="usr">DNI: </label>
-                            <input type="text" class="form-control" name="DNI" size="40" value="<?php echo $alumno['dni_alu'];?>" >
+                            <label for="usr">Nombre Classe: </label>
+                            <input type="text" class="form-control" name="Nombre" size="40" value="<?php echo $alumno['nom_classe'];?>" >
                     </div>
                 </div>    
-                <div class="row">
-                        <div class="col">
-                            <label for="pwd">1º Apellido: </label>
-                            <input type="text" class="form-control" name="1r_Apellido" size="40" value="<?php echo $alumno['cognom1_alu'];?>" >
-                        </div>
-                    <div class="col">
-                        <label for="text">2º Apellido: </label>
-                        <input type="text" class="form-control" name="2o_Apellido" size="40" value="<?php echo $alumno['cognom2_alu'];?>">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="text">Correo: </label>
-                        <input type="email" class="form-control" name="Correo" placeholder="user@ejemplo.com" size="40" value="<?php echo $alumno['email_alu'];?>">
-                    </div>
                     <div class="form-group col-md-4">
-                        <label for="inputState">Clase: </label>
-                        <select class="form-control" name="Classe" id="[id]"> 
+                        <label for="inputState">Tutor: </label>
+                        <select class="form-control" name="Tutor" id="[id]"> 
                         <?php foreach ($result as $linea){ ?>
-                            <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
+                            <option value="<?php echo $linea['id_professor']; ?>" ><?php echo $linea['nom_professor']; ?></option>
                         <?php } ?>
                         </select>
                     </div>

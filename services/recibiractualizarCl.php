@@ -1,24 +1,22 @@
 <?php
 $id=$_POST['id'];
-$DNI=$_POST['DNI'];
 $Nombre=$_POST['Nombre'];
-$Apellido1=$_POST['1r_Apellido'];
-$Apellido2=$_POST['2o_Apellido'];
-$Telefono=$_POST['Telefono'];
-$Correo=$_POST['Correo'];
-$Clase=$_POST['Classe'];
+$Codigo=$_POST['Codigo'];
+$Tutor=$_POST['Tutor'];
 
 
 require_once 'conexion.php';
 
-$sql="UPDATE tbl_alumne SET dni_alu = '$DNI', nom_alu= '$Nombre', cognom1_alu= '$Apellido1', cognom2_alu='$Apellido2', telf_alu='$Telefono', email_alu= '$Correo', classe= $Clase 
-WHERE  id_alumne=$id;";
+$sql="UPDATE tbl_classe SET  codi_classe= '$Codigo', nom_classe= '$Nombre', tutor= '$Tutor'
+WHERE id_classe=$id;";
 mysqli_query($conexion,$sql);
 
 
 
 
-header("Location:../view/datos.php");
+
+
+header("Location:../view/datosCl.php");
 echo $sql;
 
 // else {

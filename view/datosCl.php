@@ -65,7 +65,7 @@ include_once '../services/conexion.php';
                  <td><?php echo "{$registro['codi_classe']}";?></td>
                  <td><?php echo "{$registro['nom_classe']}";?></td>
                  <td><?php echo "{$registro['nom_prof']} {$registro['cognom1_prof']}";?></td>
-                 <td><?php echo "<a href='../services/actualizaruser.php' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
+                 <td><?php echo "<a href='../services/actualizarCl.php?id_classe=".$registro['id_classe']."' class='btn btn-warning' role='button' aria-pressed='true'>Actualizar</a>"?></td>
                  <td><?php echo "<a href='../services/eliminarclases.php?id_classe=".$registro['id_classe']."' class='btn btn-danger' role='button' aria-pressed='true'>Eliminar</a>"?></td>
              </tr>
          <?php } ?>
