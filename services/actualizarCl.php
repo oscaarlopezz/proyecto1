@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Creación de usuarios</title>
+    <title>Actualiza la clase</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@ $result=mysqli_query($conexion,$sql);
     <div class="container">
         <div class="fondo">
             <div class="fondo2">
-                <form action="recibiractualizarAl.php" method="POST">
+                <form action="recibiractualizarCl.php" method="POST">
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
@@ -73,10 +73,6 @@ $result=mysqli_query($conexion,$sql);
                             <option value="<?php echo $linea['id_classe']; ?>" ><?php echo $linea['nom_classe']; ?></option>
                         <?php } ?>
                         </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="text">Teléfono: </label>
-                        <input type="text" class="form-control" name="Telefono" size="40" value="<?php echo $alumno['telf_alu'];?>">
                     </div>
                 </div>
                     <div class="col-sm-offset-2 col-sm-10">
