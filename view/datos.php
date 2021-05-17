@@ -24,7 +24,14 @@ include_once '../services/conexion.php';
     <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
+<?php
+error_reporting(0);
+$fil = $_POST['fil']
+if (!($fil == '')) {
+    $result = mysqli_query($conexion,"SELECT tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu = '%$fil%' or tbl_alumne.nom_alu = '%$fil%'");
+}
 
+?>
 <div class="nav">
     <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
 </div>

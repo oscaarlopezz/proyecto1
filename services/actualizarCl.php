@@ -52,15 +52,15 @@ $result2=mysqli_query($conexion,$sql);
                         <input type="text" class="form-control" name="Codigo" value="<?php echo $alumno['codi_classe'];?>" size="40">
                     </div>
                     <div class="col">
-                            <label for="usr">Nombre Classe: </label>
+                            <label for="text">Nombre Classe: </label>
                             <input type="text" class="form-control" name="Nombre" size="40" value="<?php echo $alumno['nom_classe'];?>" >
                     </div>
                 </div>    
                     <div class="form-group col-md-4">
                         <label for="inputState">Tutor: </label>
                         <select class="form-control" name="Tutor" id="[id]"> 
-                        <?php foreach ($result as $linea){ ?>
-                            <option value="<?php echo $linea['id_professor']; ?>" ><?php echo $linea['nom_professor']; ?></option>
+                        <?php foreach ($result2 as $linea){ ?>
+                            <option value=<?php echo $linea['id_professor']; ?>><?php echo $linea['nom_prof']; ?></option>
                         <?php } ?>
                         </select>
                     </div>
