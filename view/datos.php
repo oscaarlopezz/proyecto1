@@ -24,14 +24,27 @@ include_once '../services/conexion.php';
     <link rel="stylesheet" href="../css/stylesD.css">
 </head>
 <body>
+<div class="buscador_t">
+    <form action="datos.php" method="POST">
+        <input class="input1_t" type="text" value="" placeholder="Filtrar" name="fil">
+        <input class="buscar" type="submit" value="Filtrar" name="filtro">
+    </form>
+</div>
 <?php
+// error_reporting(0);
+// $fil = $_POST['fil']
+// if (!($fil == '')) {
+//     $result = mysqli_query($conexion,"SELECT tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu = '%$fil%' or tbl_alumne.nom_alu = '%$fil%'");
+// }
 error_reporting(0);
-$fil = $_POST['fil']
+$fil = $_POST['fil'];
 if (!($fil == '')) {
-    $result = mysqli_query($conexion,"SELECT tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu = '%$fil%' or tbl_alumne.nom_alu = '%$fil%'");
-}
+    $result = mysqli_query($conexion,"SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.codi_classe from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.codi_classe like '%$fil%'");
+}else {
+        $result = mysqli_query($conexion,"SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.codi_classe from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe");}
+?> 
 
-?>
+
 <div class="nav">
     <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
 </div>
@@ -45,7 +58,7 @@ if (!($fil == '')) {
     <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
 </div>
 <?php
-     // Check connection
+    //  Check connection
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
