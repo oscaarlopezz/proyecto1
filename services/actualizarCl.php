@@ -46,17 +46,17 @@ $result2=mysqli_query($conexion,$sql);
                 <div class="form-group">
                 <br/>
                 <div class="form-row">
-                    <div class="col-9">
+                    <div class="col-7">
                     <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>" size="40">
                         <label for="text">Código Clase: </label>
                         <input type="text" class="form-control" name="Codigo" value="<?php echo $alumno['codi_classe'];?>" size="40">
                     </div>
                     <div class="col">
-                            <label for="text">Nombre Classe: </label>
+                            <label for="text">Classe: </label>
                             <input type="text" class="form-control" name="Nombre" size="40" value="<?php echo $alumno['nom_classe'];?>" >
                     </div>
                 </div>    
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="inputState">Tutor: </label>
                         <select class="form-control" name="Tutor" id="[id]"> 
                         <?php foreach ($result2 as $linea){ ?>
