@@ -23,23 +23,20 @@ include_once '../services/conexion.php';
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <link rel="stylesheet" href="../css/stylesD.css">
         <!-- <link rel="stylesheet" href="../css/loginmail.css"> -->
-        <script src="../js/loginmail.js"></script>
+        <script src="../js/menu.js"></script>
     </head>
     <body>
-
-    <div class="nav">
-        <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
-    </div>
-    <div class="nav2">
-        <a href="datosCl.php" class="btn btn-info" role="button" aria-pressed="true">Clases</a>
-    </div>
-    <div class="nav2">
-        <a href="datosDe.php" class="btn btn-info" role="button" aria-pressed="true">Departamentos</a>
-    </div>
-    <div class="logout">
-        <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
-    </div>
-
+    <nav>
+  <ul class="menu">
+    <li class="item button secondary"><a href="../services/crear.php">Crear</a></li>
+    <li class="item"><a href="datosPr.php">Profesores</a></li>
+    <li class="item"><a href="datosCl.php">Clases</a></li>
+    <li class="item"><a href="datosDe.php">Departamentos</a></li>
+    <li class="item button"><a href="../services/logout.php">Log Out</a></li>
+    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</nav>
+<h1>Alumnos</h1>
     <div class="filtro">
     <b><u>Buscador</u></b>
         <form action="datos.php" method="POST">
@@ -67,6 +64,7 @@ include_once '../services/conexion.php';
     //     $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
     //     $result=mysqli_query($conexion,$sql);
     ?>
+
     <div class="table">
     <table class="table table-striped">
             <thead class="table-dark">
@@ -99,12 +97,9 @@ include_once '../services/conexion.php';
             <?php } ?>
     </table>
     </div>
-    <div class="boton">
-        <a href="../services/crear.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
-    </div>
 
 <!-- Enviar Mail-->
-<div class="center">
+<!-- <div class="center">
   <button id="show-login">Enviar Correo</button>
 </div>
 <div class="popup">
@@ -124,12 +119,7 @@ include_once '../services/conexion.php';
     </div>
     </div>
   </div>
-</div>
-
-    <div class="csv">
-        <a href="../services/CSV/csvAl.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
-    </div>
-
+</div> -->
 
 <?php mysqli_close($conexion);
     
