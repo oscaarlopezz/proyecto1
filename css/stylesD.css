@@ -46,7 +46,20 @@ body {
     float: right;
     padding: 3% 5% 1% 0%;
 }
-
+.filtro {
+    padding: 3% 0 0% 17%;
+    text-align: left;
+}
+.filtro b {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 2.5vw;
+    padding-right: 4%;
+}
+.filtro form {
+    width: 100%;
+}
 
 .table td {
     background-color: white;

@@ -39,13 +39,28 @@ include_once '../services/conexion.php';
     <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
 </div>
 
+<!--Filtro-->
+<div class="filtro">
+<b><u>Buscador</u></b>
+    <form action="datosCl.php" method="POST">
+        <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
+        <input class="buscar" type="submit" value="Filtrar" name="filtro">
+    </form>
+</div>
 <?php
+error_reporting(0);
+$fil = $_POST['fil'];
+if (!($fil == '')) {
+    $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor where tbl_classe.codi_classe like '%$fil%' or tbl_classe.nom_classe like '%$fil%' or tbl_professor.nom_prof like '%$fil%'");
+}else {
+        $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor");}
+
      // Check connection
-     if (!$conexion) {
-         die("Connection failed: ".mysqli_connect_error());
-     }
-     $sql="SELECT * FROM tbl_classe INNER JOIN tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
-     $result=mysqli_query($conexion,$sql);
+    //  if (!$conexion) {
+    //      die("Connection failed: ".mysqli_connect_error());
+    //  }
+    //  $sql="SELECT * FROM tbl_classe INNER JOIN tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
+    //  $result=mysqli_query($conexion,$sql);
  ?>
 <div class="table">
 <table class="table table-striped">
