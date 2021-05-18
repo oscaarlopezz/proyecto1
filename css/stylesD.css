@@ -24,6 +24,7 @@ body {
     float: left;
     padding: 1% 5%;
 }
+
 .csv {
     float: right;
     padding: 1% 5%;
@@ -38,19 +39,23 @@ body {
     float: left;
     padding: 3% 0 1% 5%;
 }
+
 .nav2 {
     float: left;
     padding: 3% 0 1% 2.5%;
 }
+
 .logout {
     float: right;
     padding: 3% 5% 1% 0%;
 }
+
 .filtro {
     padding: 3% 35% 0% 0%;
     text-align: center;
     float: right;
 }
+
 .filtro b {
     text-align: center;
     color: white;
@@ -58,6 +63,7 @@ body {
     font-size: 2.5vw;
     padding-right: 4%;
 }
+
 .filtro form {
     width: 100%;
 }
@@ -74,6 +80,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
 .fondo2 {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
@@ -84,7 +91,9 @@ body {
     color: white;
 }
 
+
 /* ---- E-MAIL ---- */
+
 .center {
     position: absolute;
     top: 50%;
@@ -123,6 +132,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+    background: blur 100px;
 }
 
 .popup .close-btn {
@@ -190,7 +200,10 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
+
+
 /* ---- FIN E-MAIL ---- */
+
 @media screen and (max-width:800px) {
     * {
         overflow-x: scroll;
@@ -228,7 +241,6 @@ body {
         padding: 4%;
         height: 10%;
     }
-
     .logout {
         float: right;
         padding: 6% 2% 6% 4%;
@@ -239,6 +251,4 @@ body {
         padding: 6%;
         height: 10%;
     }
-
-
 }

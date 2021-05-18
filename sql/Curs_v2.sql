@@ -114,15 +114,14 @@ INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `t
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('43478978S', 'Holi', 'Palanca', 'Aireising', '652867932', 'hpalanca@gmail.com', 5);
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('43478648S', 'Pedro', 'Sanchez', 'Cruz', '982867932', 'psanchez@gmail.com', 5);
 -- FALTAN 10 MÁS
-
---
-
-
-
-
-
-
-
-
-
-
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23478548S', 'Albert', 'Fenoi', 'Holaa', '982867987', 'afenoi@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23478648S', 'Alex', 'Toscano', 'Toksyno', '872867987', 'atoscano@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23478748S', 'Victor', 'Malaret', 'Malaretus', '987867987', 'vmalaret@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23478848S', 'Eric', 'Olmos', 'Ruíz', '567867987', 'eolmos@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23378642O', 'Marc', 'Gonzalez', 'Pradas', '272867987', 'mgonzalez@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23478642O', 'Isaac', 'ortiz', 'Rius', '572867987', 'iortiz@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23578642O', 'Joan', 'Martin', 'Suarez', '333867987', 'jmartin@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23678642O', 'Ignasi', 'Gonzalez', 'Javasripct', '787654234', 'igonzalez@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23778642O', 'Aurelio', 'Ramas', 'Pino', '656762534', 'aramas@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('23878642O', 'Vicente', 'Toritlla', 'Cebollista', '902867987', 'vtortilla@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('67478642O', 'Pedro', 'Galisteo', 'Monsalve', '672867987', 'pgalisteo@gmail.com', 5);
