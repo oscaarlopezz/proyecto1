@@ -26,17 +26,12 @@ include_once '../services/conexion.php';
 
 ?>
 
-
-
 <?php $sql="SELECT * FROM tbl_dept";
 $id=$_GET['id_dept'];
 $result=mysqli_query($conexion,$sql);
 $result = mysqli_query($conexion,"SELECT * FROM `tbl_dept` where `id_dept`=$id");
 $alumno=mysqli_fetch_array($result);
 ?>
-
-
-
 
 <body>
     <h1>Actualizar Departamento</h1>
