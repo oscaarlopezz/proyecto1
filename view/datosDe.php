@@ -39,6 +39,30 @@ include_once '../services/conexion.php';
     <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
 </div>
 
+<!--Filtro-->
+<div class="filtro">
+<b><u>Buscador</u></b>
+    <form action="datosDe.php" method="POST">
+        <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
+        <input class="buscar" type="submit" value="Filtrar" name="filtro">
+    </form>
+</div>
+<?php
+error_reporting(0);
+$fil = $_POST['fil'];
+if (!($fil == '')) {
+    $result = mysqli_query($conexion,"SELECT * from tbl_dept where id_dept like '%$fil%' or codi_dept like '%$fil%' or nom_dept like '%$fil%'");
+}else {
+        $result = mysqli_query($conexion,"SELECT * from tbl_dept");}
+
+     // Check connection
+    //  if (!$conexion) {
+    //      die("Connection failed: ".mysqli_connect_error());
+    //  }
+    //  $sql="SELECT * FROM tbl_classe INNER JOIN tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
+    //  $result=mysqli_query($conexion,$sql);
+?>
+
 <?php
      // Check connection
      if (!$conexion) {
