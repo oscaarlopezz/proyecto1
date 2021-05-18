@@ -59,12 +59,12 @@ if (!($fil == '')) {
 </div>
 <?php
     //  Check connection
-     if (!$conexion) {
-         die("Connection failed: ".mysqli_connect_error());
-     }
-    $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
-    $result=mysqli_query($conexion,$sql);
- ?>
+//      if (!$conexion) {
+//          die("Connection failed: ".mysqli_connect_error());
+//      }
+//     $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
+//     $result=mysqli_query($conexion,$sql);
+//  ?>
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
