@@ -29,7 +29,7 @@ include_once '../services/conexion.php';
 <?php $sql="SELECT * FROM tbl_dept";
 $id=$_GET['id_dept'];
 $result=mysqli_query($conexion,$sql);
-$result = mysqli_query($conexion,"SELECT * FROM `tbl_dept` where `id_dept`=$id");
+$result=mysqli_query($conexion,"SELECT * FROM `tbl_dept` where `id_dept`=$id");
 $alumno=mysqli_fetch_array($result);
 ?>
 
@@ -49,7 +49,7 @@ $alumno=mysqli_fetch_array($result);
                     </div>
                     <div class="col-6">
                             <label for="text">Nombre Departamento: </label>
-                            <input type="text" class="form-control" name="nom_dept" size="40" <?php echo $alumno['nom_dept'];?>>
+                            <input type="text" class="form-control" name="nom_dept" size="40" value="<?php echo $alumno['nom_dept'];?>"">
                     </div>
                 </div>    
                     <div class="col-sm-offset-2 col-sm-10">
