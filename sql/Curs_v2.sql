@@ -74,6 +74,8 @@ INSERT INTO `tbl_classe` (`codi_classe`, `nom_classe`, `tutor`) VALUES ('ASIX1',
 
 delete from tbl_alumne where id_alumne=1;
 
+
+
 CREATE TABLE IF NOT EXISTS tbl_admin(
 	id_admin int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	email_admin varchar(50) NOT NULL,
@@ -107,10 +109,13 @@ INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `t
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('24678998S', 'Santiago', 'Abascal', 'Conde', '76425928', 'sabascal@gmail.com', 5);
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('54678998O', 'Pablo', 'Iglesias', 'Chepas', '967646673', 'piglesias@gmail.com', 5);
 INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('44678998S', 'Sergio', 'Merino', 'Saceda', '467646673', 'smerino@gmail.com', 5);
+--POR INSERTAR
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('43478998S', 'Helena', 'Villacampa', 'Lay', '467896673', 'hvillacampa@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('43478978S', 'Holi', 'Palanca', 'Aireising', '652867932', 'hpalanca@gmail.com', 5);
+INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_alu`, `telf_alu`, `email_alu`, `classe`) VALUES ('43478648S', 'Pedro', 'Sanchez', 'Cruz', '982867932', 'psanchez@gmail.com', 5);
+-- FALTAN 10 MÁS
 
-
-
-
+--
 
 
 
