@@ -3,7 +3,7 @@
 <?php
 include_once '../services/conexion.php';
 // include_once '../services/comprobaruser.php';
-// if (isset($_SESSION['email_admin'])){
+// if (isset($_SESSION['nom_admin'])){
 //   session_start();
 
 
