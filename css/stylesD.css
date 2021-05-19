@@ -245,6 +245,12 @@ li {
 .button, .button.secondary {
     border-bottom: 1px #444 solid;
 }
+.button a:hover {
+    color: red;
+}
+.button.secondary a:hover {
+    color: green;
+}
 .toggle {
     order: 1;
 }
