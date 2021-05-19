@@ -30,5 +30,5 @@ if (isset($_SESSION['nom_admin'])){
 	header('Content-Type: application/csv');
 	header('Content-Disposition: attachment; filename=alumnes.csv;');
 }else {
-    header("location: ../sinacceso.php");
+    header("location: ../../view/sinacceso.php");
 }
