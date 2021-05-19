@@ -3,6 +3,15 @@ require_once '../conexion.php';
 $sql = "select * from tbl_alumne";
 $query = $conexion->query($sql);
 if($query){
+	echo "id_alumne".";";
+	echo "dni_alu".";";
+	echo "nom_alu".";";
+	echo "cognom1_alu".";";
+	echo "cognom2_alu".";";
+	echo "telf_alu".";";
+	echo "email_alu".";";
+	echo "classe"."\n";
+
 	while($r  = $query->fetch_object()){
 		echo $r->id_alumne.";";
 		echo $r->dni_alu.";";

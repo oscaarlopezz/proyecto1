@@ -3,6 +3,10 @@ require_once '../conexion.php';
 $sql = "select * from tbl_dept";
 $query = $conexion->query($sql);
 if($query){
+	echo "id_dept".";";
+	echo "codi_dept".";";
+	echo "nom_dept"."\n";
+
 	while($r  = $query->fetch_object()){
 		echo $r->id_dept.";";
 		echo $r->codi_dept.";";
