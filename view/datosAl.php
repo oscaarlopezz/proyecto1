@@ -133,7 +133,7 @@ if (isset($_SESSION['nom_admin'])){
     
 // echo "HOLA $user";
 }else {
-    header("location: ../index.php");
+  header("location: sinacceso.php");
 }
 mysqli_close($conexion);
 ?>

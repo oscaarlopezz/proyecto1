@@ -40,5 +40,5 @@ if (isset($_SESSION['nom_admin'])){
 </html>
 <?php
 }else {
-    header("location: ../index.php");
+    header("location: sinacceso.php");
 }

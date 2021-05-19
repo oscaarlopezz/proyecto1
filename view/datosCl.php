@@ -93,7 +93,7 @@ if (!($fil == '')) {
 <?php mysqli_close($conexion);
 
 }else {
-    header("location: ../index.php");
+    header("location: sinacceso.php");
 }
 ?>
 </div>
