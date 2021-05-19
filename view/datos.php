@@ -99,9 +99,7 @@ include_once '../services/conexion.php';
             <?php } ?>
     </table>
     </div>
-<div class="boton">
-    <a href="../js/loginmail.js" class="btn btn-success" role="button" aria-pressed="true">Enviar Correo</a>
-</div>
+
 <div class="csv">
     <a href="../services/CSV/csvCl.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
