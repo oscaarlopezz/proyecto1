@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 
 $nombre=$_POST['nom_pr'];
 $apellido1=$_POST['cognom1_pr'];
@@ -14,3 +17,6 @@ echo $sql;
 mysqli_query($conexion,$sql);
 
 header("Location:../view/datosPr.php");
+}else {
+    header("location: ../view/sinacceso.php");
+}

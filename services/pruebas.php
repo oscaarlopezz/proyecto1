@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 include_once '../services/conexion.php';
 ?>
 
@@ -19,8 +22,9 @@ foreach ($result as $linea){ ?>
     <option value="<?php echo $linea['id_dept']; ?>" ><?php echo $linea['nom_dept']; ?></option>
 <?php } ?>
   
-
-
-
 </body>
 </html>
+<?php
+}else {
+    header("location: ../view/sinacceso.php");
+}

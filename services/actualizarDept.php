@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+?>
 <!DOCTYPE html>
 <html>
 <title>Crear Departamento</title>
@@ -64,3 +68,7 @@ $alumno=mysqli_fetch_array($result);
     </div>
 </body>
 </html>
+<?php
+}else {
+    header("location: ../view/sinacceso.php");
+}

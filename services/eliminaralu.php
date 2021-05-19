@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 
 include 'conexion.php';
 
@@ -9,3 +12,7 @@ echo "Tu id es $id";
 
 $delete = mysqli_query($conexion,"DELETE FROM tbl_alumne Where id_alumne=$id");
 header("Location:../view/datosAl.php");
+
+}else {
+    header("location: ../view/sinacceso.php");
+}

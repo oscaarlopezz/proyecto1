@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 
 $DNI=$_POST['DNI'];
 $Nombre=$_POST['Nombre'];
@@ -15,3 +18,6 @@ echo $sql;
 mysqli_query($conexion,$sql);
 
 header("Location:../view/datosAl.php");
+}else {
+    header("location: ../view/sinacceso.php");
+}

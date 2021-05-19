@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 
 $CodiClase=$_POST['codi_clase'];
 $NomClase=$_POST['nom_clase'];
@@ -11,3 +14,6 @@ mysqli_query($conexion,$sql);
 
 header("Location:../view/datosCl.php");
 echo $sql;
+}else {
+    header("location: ../view/sinacceso.php");
+}
