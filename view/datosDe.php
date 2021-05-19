@@ -1,7 +1,9 @@
 <?php
-//if (isset($_GET['login'])){
-//    session_start();
+
 include_once '../services/conexion.php';
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -99,16 +101,11 @@ if (!($fil == '')) {
 </div>
 
 
- <?mysqli_close($conexion);?>
- <?
-/*    
-    else{
-        header("Location:../index.php");
-    }   
+<?php mysqli_close($conexion);
 }else {
-    header("location:../index.php");
+    header("location: ../index.php");
 }
-*/
+
 ?>
 </div>
 </body>

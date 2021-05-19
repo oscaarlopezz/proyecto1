@@ -17,7 +17,7 @@ mysqli_query($conexion,$sql);
 
 
 
-
+<script>alert("Actualización exitosa!")</script>
 header("Location:../view/datos.php");
 echo $sql;
 

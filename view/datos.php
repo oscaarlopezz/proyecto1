@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <?php
+
+// include_once '../services/comp.php';
 include_once '../services/conexion.php';
-// include_once '../services/comprobaruser.php';
-// if (isset($_SESSION['nom_admin'])){
-//   session_start();
+session_start();
+if (isset($_SESSION['nom_admin'])){
 
 
 ?>
@@ -131,13 +132,13 @@ include_once '../services/conexion.php';
   </div>
 </div> -->
 
-<?php mysqli_close($conexion);
+<?php 
     
-
-// }else {
-//     header("location: ../index.php");
-// }
-
+// echo "HOLA $user";
+}else {
+    header("location: ../index.php");
+}
+mysqli_close($conexion);
 ?>
 </div>
 </body>
