@@ -22,8 +22,10 @@ session_destroy();
     <div class="blur">
         <div class="blur2">
         <form class="login" METHOD='POST' ACTION='../services/comprobaruser.php'>
-
             <h1>LOGIN</h1>
+            <?php 
+            // error_reporting(0);
+            ?>            
             <div class="escuela">
                 <div class="input-escuela">
                     <i class="fas fa-user icon"></i>
