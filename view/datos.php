@@ -2,9 +2,9 @@
 <html lang="es">
 <?php
 include_once '../services/conexion.php';
-include_once '../services/comprobaruser.php';
-if (isset($_SESSION['email_admin'])){
-  session_start();
+// include_once '../services/comprobaruser.php';
+// if (isset($_SESSION['email_admin'])){
+//   session_start();
 
 
 ?>
@@ -132,9 +132,9 @@ if (isset($_SESSION['email_admin'])){
 <?php mysqli_close($conexion);
     
 
-}else {
-    header("location: ../index.php");
-}
+// }else {
+//     header("location: ../index.php");
+// }
 
 ?>
 </div>
