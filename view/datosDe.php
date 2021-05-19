@@ -22,22 +22,20 @@ include_once '../services/conexion.php';
     <!-- ****** -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="../css/stylesD.css">
+    <script src="../js/menu.js"></script>
 </head>
 <body>
-<div class="back">
-
-<div class="nav">
-    <a href="datosPr.php" class="btn btn-info" role="button" aria-pressed="true">Profesors</a>
-</div>
-<div class="nav">
-    <a href="datosCl.php" class="btn btn-info" role="button" aria-pressed="true">Clases</a>
-</div>
-<div class="nav">
-    <a href="datos.php" class="btn btn-info" role="button" aria-pressed="true">Alumnos</a>
-</div>
-<div class="logout">
-    <a href="../services/logout.php" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
-</div>
+<nav>
+  <ul class="menu">
+    <li class="item button secondary"><a href="../services/crear.php">Crear</a></li>
+    <li class="item"><a href="datosPr.php">Profesores</a></li>
+    <li class="item"><a href="datosCl.php">Clases</a></li>
+    <li class="item"><a href="datos.php">Alumnos</a></li>
+    <li class="item button"><a href="../services/logout.php">Log Out</a></li>
+    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</nav>
+<h1>Departamentos</h1>
 
 <!--Filtro-->
 <div class="filtro">
@@ -63,14 +61,14 @@ if (!($fil == '')) {
     //  $result=mysqli_query($conexion,$sql);
 ?>
 
-<?php
+<!-- 
      // Check connection
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
      $sql="select * from tbl_dept";
      $result=mysqli_query($conexion,$sql);
- ?>
+ -->
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
