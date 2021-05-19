@@ -12,7 +12,7 @@ mysqli_free_result($result);
 
 if ($num == 1){
     session_start();
-    $_SESSION['nom_admin']=$user;
+    $_SESSION['email_admin']=$user;
     header("Location:../view/datos.php");
 }
 else{
