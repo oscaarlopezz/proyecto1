@@ -14,4 +14,4 @@ $sql="INSERT INTO `tbl_alumne` (`dni_alu`, `nom_alu`, `cognom1_alu`, `cognom2_al
 echo $sql;
 mysqli_query($conexion,$sql);
 
-header("Location:../view/datos.php");
+header("Location:../view/datosAl.php");

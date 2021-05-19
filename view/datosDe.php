@@ -32,7 +32,7 @@ if (isset($_SESSION['nom_admin'])){
     <li class="item button secondary"><a href="../services/crear.php">Crear</a></li>
     <li class="item"><a href="datosPr.php">Profesores</a></li>
     <li class="item"><a href="datosCl.php">Clases</a></li>
-    <li class="item"><a href="datos.php">Alumnos</a></li>
+    <li class="item"><a href="datosAl.php">Alumnos</a></li>
     <li class="item button"><a href="../services/logout.php">Log Out</a></li>
     <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
   </ul>
@@ -46,6 +46,9 @@ if (isset($_SESSION['nom_admin'])){
         <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
         <input class="buscar" type="submit" value="Filtrar" name="filtro">
     </form>
+</div>
+<div class="csv">
+    <a href="../services/CSV/csvDe.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
 <?php
 error_reporting(0);
@@ -93,11 +96,6 @@ if (!($fil == '')) {
          <?php } ?>
  </table>
 </div>
-
-<div class="csv">
-    <a href="../services/CSV/csvDe.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
-</div>
-
 
 <?php mysqli_close($conexion);
 }else {

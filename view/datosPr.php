@@ -30,7 +30,7 @@ if (isset($_SESSION['nom_admin'])){
 <nav>
   <ul class="menu">
     <li class="item button secondary"><a href="../services/crear.php">Crear</a></li>
-    <li class="item"><a href="datos.php">Alumnos</a></li>
+    <li class="item"><a href="datosAl.php">Alumnos</a></li>
     <li class="item"><a href="datosCl.php">Clases</a></li>
     <li class="item"><a href="datosDe.php">Departamentos</a></li>
     <li class="item button"><a href="../services/logout.php">Log Out</a></li>
@@ -46,6 +46,10 @@ if (isset($_SESSION['nom_admin'])){
         <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
         <input class="buscar" type="submit" value="Filtrar" name="filtro">
     </form>
+</div>
+
+<div class="csv">
+    <a href="../services/CSV/csvPr.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
 <?php
 error_reporting(0);
@@ -91,10 +95,6 @@ if (!($fil == '')) {
              </tr>
          <?php } ?>
  </table>
-</div>
-
-<div class="csv">
-    <a href="../services/CSV/csvPr.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
 
 <?php mysqli_close($conexion);

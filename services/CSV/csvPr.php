@@ -16,4 +16,4 @@ if($query){
 
 
 header('Content-Type: application/csv');
-header('Content-Disposition: attachment; filename=animal.csv;');
+header('Content-Disposition: attachment; filename=profesores.csv;');
