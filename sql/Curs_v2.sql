@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS tbl_professor(
 	cognom2_prof varchar (20) NULL,
 	email_prof varchar(50) NULL,
 	telf varchar (5) NULL, /* Son les extensions, per exemple: 32256*/
-	dept int(5) NOT NULL,
+	dept int(5) NULL,
 	constraint pk_professor PRIMARY KEY (id_professor)
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS tbl_classe (
 	id_classe int(5) NOT NULL AUTO_INCREMENT,
 	codi_classe varchar(5) NOT NULL,
 	nom_classe varchar(25) NULL,
-	tutor int(5) NOT NULL,
+	tutor int(5) NULL,
 	constraint pk_consta PRIMARY KEY (id_classe)
 );
 
