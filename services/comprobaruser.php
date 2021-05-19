@@ -16,5 +16,5 @@ if ($num == 1){
     header("Location:../view/datos.php");
 }
 else{
-header("Location:mens.php")
+header("Location:mens.php");
 }
