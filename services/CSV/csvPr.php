@@ -3,6 +3,8 @@ require_once '../conexion.php';
 $sql = "select * from tbl_professor";
 $query = $conexion->query($sql);
 if($query){
+	echo "Hola"."\n";
+
 	while($r  = $query->fetch_object()){
 		echo $r->id_professor.";";
 		echo $r->nom_prof.";";
