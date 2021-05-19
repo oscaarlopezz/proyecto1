@@ -109,19 +109,21 @@ include_once '../services/conexion.php';
 </div>
 <div class="popup">
   <div class="close-btn">&times;</div>
+  <form class="" method="post" action="../services/crear.php">
   <div class="form">
     <h2>Debes tener cuenta de administrador para poder enviar correos</h2>
     <div class="form-element">
       <label for="email">Email</label>
-      <input type="text" id="email" placeholder="Enter email">
+      <input type="text" id="user" placeholder="introduce tu email">
     </div>
     <div class="form-element">
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter password">
+      <input type="password" id="password" placeholder="Introduce tu contraseña">
     </div>
     <div class="form-element">
-      <button>Iniciar sesión</button>
+      <button type="sumbit">Enviar</button>
     </div>
+    </form>
     </div>
   </div>
 </div>
