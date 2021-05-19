@@ -61,14 +61,14 @@ if (!($fil == '')) {
     //  $result=mysqli_query($conexion,$sql);
 ?>
 
-<?php
+<!-- 
      // Check connection
      if (!$conexion) {
          die("Connection failed: ".mysqli_connect_error());
      }
      $sql="select * from tbl_dept";
      $result=mysqli_query($conexion,$sql);
- ?>
+ -->
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
