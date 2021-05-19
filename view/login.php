@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php 
+session_start();
+session_unset();
+session_destroy();
+?>
 <head>
     <meta charset="UTF-8">
     <title>Gestion Escuela</title>

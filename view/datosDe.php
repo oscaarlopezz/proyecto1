@@ -41,7 +41,7 @@ if (isset($_SESSION['nom_admin'])){
 
 <!--Filtro-->
 <div class="filtro">
-<b><u>Buscador</u></b>
+<b><u>Filtro</u></b>
     <form action="datosDe.php" method="POST">
         <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
         <input class="buscar" type="submit" value="Filtrar" name="filtro">
