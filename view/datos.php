@@ -2,9 +2,9 @@
 <html lang="es">
 <?php
 include_once '../services/conexion.php';
-include_once '../services/comprobaruser.php';
-if (isset($user,$password)){
-    session_start();
+// include_once '../services/comprobaruser.php';
+// if (isset($_GET['login'])){
+//    session_start();
 
 ?>
     <head>
