@@ -10,19 +10,23 @@
     display: none;
     /*no mostrar barra scroll pero funciona*/
 }
-
+html { 
+    background:  url(https://cdn.discordapp.com/attachments/840141709606256701/844826961825890334/login.gif) no-repeat center center fixed; 
+    background-size: cover;
+  }
 body {
     /* margin-top: 7%; */
     padding: 7% 33% 0;
-    background: url(../img/login.jpg);
+    /* background: url(../img/login.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 .escuela {
     width: 95%;
     padding: 25px;
 }
+
 .blur {
     border-radius: 5%;
     background-position: bottom;
@@ -31,12 +35,14 @@ body {
     height: 100%;
     width: 100%;
 }
+
 .blur2 {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     height: 100%;
     width: 100%;
 }
+
 .login {
     border-radius: 5%;
     padding: 5%;
@@ -53,6 +59,7 @@ h1 {
     font-size: 3vw;
 }
 
+
 /*input[type="usuario"],
 input[type="password"] {
     font-size: 25px;
@@ -64,15 +71,18 @@ input[type="password"] {
 .input-escuela {
     padding-bottom: 2%;
 }
+
 .input-escuela input {
     width: 95%;
     height: 40px;
     font-size: 1vw;
 }
+
 .input-escuela i {
     color: black;
     width: 5%;
 }
+
 .icon {
     width: 5%;
     text-align: center;
@@ -153,5 +163,4 @@ p {
         padding-left: 5%;
         width: 0%;
     }
-    
 }

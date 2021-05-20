@@ -1,7 +1,9 @@
 <?php
-//if (isset($_GET['login'])){
-//    session_start();
+
 include_once '../services/conexion.php';
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +30,7 @@ include_once '../services/conexion.php';
 <nav>
   <ul class="menu">
     <li class="item button secondary"><a href="../services/crear.php">Crear</a></li>
-    <li class="item"><a href="datos.php">Alumnos</a></li>
+    <li class="item"><a href="datosAl.php">Alumnos</a></li>
     <li class="item"><a href="datosCl.php">Clases</a></li>
     <li class="item"><a href="datosDe.php">Departamentos</a></li>
     <li class="item button"><a href="../services/logout.php">Log Out</a></li>
@@ -39,11 +41,15 @@ include_once '../services/conexion.php';
 
 <!--Filtro-->
 <div class="filtro">
-<b><u>Buscador</u></b>
+<b><u>Filtro</u></b>
     <form action="datosPr.php" method="POST">
         <input class="input1_t" type="text" value="" placeholder="Inserta datos para filtrar" name="fil">
         <input class="buscar" type="submit" value="Filtrar" name="filtro">
     </form>
+</div>
+
+<div class="csv">
+    <a href="../services/CSV/csvPr.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
 <?php
 error_reporting(0);
@@ -90,23 +96,13 @@ if (!($fil == '')) {
          <?php } ?>
  </table>
 </div>
-<div class="boton">
-    <a href="../services/crear.php" class="btn btn-success" role="button" aria-pressed="true">Crear</a>
-</div>
-<div class="csv">
-    <a href="../services/CSV/csvPr.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
-</div>
 
- <?mysqli_close($conexion);?>
- <?
-/*    
-    else{
-        header("Location:../index.php");
-    }   
+<?php mysqli_close($conexion);
+
 }else {
-    header("location:../index.php");
+    header("location: sinacceso.php");
 }
-*/
+
 ?>
 </div>
 </body>

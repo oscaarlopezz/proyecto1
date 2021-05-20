@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 $id=$_POST['id'];
 $Nombre=$_POST['nom_pr'];
 $Apellido1=$_POST['cognom1_pr'];
@@ -23,3 +26,6 @@ echo $sql;
 // else {
 //     header("Location:../services/actualizarAl.php");
 // }
+}else {
+    header("location: ../view/sinacceso.php");
+}

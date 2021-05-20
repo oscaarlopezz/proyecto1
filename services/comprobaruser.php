@@ -12,9 +12,14 @@ mysqli_free_result($result);
 
 if ($num == 1){
     session_start();
-    $_SESSION['nom_admin']=$user;
-    header("../view/datos.php");
-}
+    $_SESSION['email_admin']=$user; 
+    echo "<script>location.href='../view/datos.php';</script>";
+    ?>
+    <!-- <meta http-equiv="Location" content="https://gestionatucole.cdwhost.com/view/datos.php"/> ->
+<?php }
 else{
-    header("../view/login2.php");
+    echo "<script>location.href='../services/mens.php';</script>";
 }
+
+
+?>

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<?php 
+session_start();
+session_unset();
+session_destroy();
+?>
 <head>
     <meta charset="UTF-8">
     <title>Gestion Escuela</title>
@@ -11,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
     <!-- ****** -->
     <link rel="stylesheet" href="../css/styles.css">
-    <script>alert('Credenciales incorrectas, porfavor intentelo de nuevo')</script>
 
 </head>
 
@@ -21,7 +24,7 @@
         <form class="login" METHOD='POST' ACTION='../services/comprobaruser.php'>
 
             <h1>LOGIN</h1>
-            <p color="red">Fallo al iniciar sesión, porfavor, inténtelo de nuevo</p>
+            <p>Fallo al iniciar sesión, porfavor, inténtelo de nuevo</p>
             <div class="escuela">
                 <div class="input-escuela">
                     <i class="fas fa-user icon"></i>
@@ -38,6 +41,7 @@
         </form>
     </div>
     </div>
+    <script>alert('Credenciales incorrectas, porfavor intentelo de nuevo')</script>
 </body>
 
 </html>

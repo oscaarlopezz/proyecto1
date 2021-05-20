@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+?>
 <!DOCTYPE html>
 <html>
 <title>Crear Usuarios</title>
@@ -28,9 +32,13 @@
         <br>        <br>
         <a href="../services/crearPr.php" class="btn btn-info" role="button" aria-pressed="true">Crear Profesor</a>
         <br>        <br>
-        <a href="../services/crearDe.php" class="btn btn-info" role="button" aria-pressed="true">Crear Departament</a>
+        <a href="../services/crearDe.php" class="btn btn-info" role="button" aria-pressed="true">Crear Departamento</a>
         <br>        <br>
         <a href="../services/crearCl.php" class="btn btn-info" role="button" aria-pressed="true">Crear Clase</a>
     </div>
 </body>
 </html>
+<?php
+}else {
+    header("location: ../view/sinacceso.php");
+}

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+?>
 <!DOCTYPE html>
 <html>
 <title>Actualizar Alumno</title>
@@ -60,7 +64,7 @@ $result2=mysqli_query($conexion,$sql);
                         <label for="inputState">Tutor: </label>
                         <select class="form-control" name="Tutor" id="[id]"> 
                         <?php foreach ($result2 as $linea){ ?>
-                            <option value=<?php echo $linea['id_professor']; ?>><?php echo $linea['nom_prof']; ?></option>
+                            <option value=<?php echo $linea['id_professor']; ?>><?php echo "{$linea['nom_prof']} {$linea['cognom1_prof']}" ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -76,3 +80,7 @@ $result2=mysqli_query($conexion,$sql);
     </div>
 </body>
 </html>
+<?php
+}else {
+    header("location: ../view/sinacceso.php");
+}

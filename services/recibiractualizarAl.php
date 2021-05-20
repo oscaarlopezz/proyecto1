@@ -1,4 +1,7 @@
-<?php
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+
 $id=$_POST['id'];
 $DNI=$_POST['DNI'];
 $Nombre=$_POST['Nombre'];
@@ -17,10 +20,13 @@ mysqli_query($conexion,$sql);
 
 
 
-
-header("Location:../view/datos.php");
+// <script>alert("Actualización exitosa!")</script>
+header("Location:../view/datosAl.php");
 echo $sql;
 
 // else {
 //     header("Location:../services/actualizarAl.php");
 // }
+}else {
+    header("location: ../view/sinacceso.php");
+}

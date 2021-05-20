@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if (isset($_SESSION['nom_admin'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <title>Actualizar Alumno</title>
@@ -90,3 +95,7 @@ $result=mysqli_query($conexion,$sql);
     </div>
 </body>
 </html>
+<?php
+}else {
+    header("location: ../view/sinacceso.php");
+}
