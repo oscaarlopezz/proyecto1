@@ -13,8 +13,8 @@ mysqli_free_result($result);
 if ($num == 1){
     session_start();
     $_SESSION['nom_admin']=$user;
-    header("Location:../view/datos.php");
+    header("../view/datos.php");
 }
 else{
-    header("Location:../view/login2.php");
+    header("../view/login2.php");
 }
