@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <?php
 
 // include_once '../services/comp.php';
 include_once '../services/conexion.php';
 session_start();
 if (isset($_SESSION['nom_admin'])){
-
+  
 
 ?>
     <head>

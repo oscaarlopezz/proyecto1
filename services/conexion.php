@@ -1,2 +1,2 @@
 <?php
-$conexion = mysqli_connect("173.249.54.180","gestiona_sergi","00Zn754n-","gestiona_curs");
+$conexion = mysqli_connect("127.0.0.1","sergi","00zn754n","curs");

@@ -6,6 +6,7 @@
     /*bloquear barra horizontal*/
     padding: 0;
     margin: 0;
+
 }
 
 ::-webkit-scrollbar {
@@ -15,6 +16,9 @@
 
 body {
     background: url(../img/datos.jpg);
+    /* background:  url(https://cdn.discordapp.com/attachments/840141709606256701/844826961825890334/login.gif) no-repeat center center fixed; 
+    background-size: cover; */
+
 }
 h1 {
     text-align: center;
@@ -274,7 +278,11 @@ li {
     * {
         overflow-x: scroll;
     }
+    .csv {
+        padding-bottom: 5%;
+    }
     h1 {
+        padding-top: 7%;
         font-size: 10vw;
     }
     .filtro {

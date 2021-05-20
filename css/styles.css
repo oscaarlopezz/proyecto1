@@ -9,11 +9,12 @@
 ::-webkit-scrollbar {
     display: none;
     /*no mostrar barra scroll pero funciona*/
-}
+} 
 html { 
     background:  url(https://cdn.discordapp.com/attachments/840141709606256701/844826961825890334/login.gif) no-repeat center center fixed; 
     background-size: cover;
-  }
+}
+      
 body {
     /* margin-top: 7%; */
     padding: 7% 33% 0;
