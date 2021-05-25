@@ -4,6 +4,11 @@ if (isset($_SESSION['nom_admin'])){
 	require_once '../conexion.php';
 	$sql = "select * from tbl_alumne";
 	$query = $conexion->query($sql);
+	header('Content-Encoding: UTF-8');
+	header('Content-Type: application/csv;charset=UTF-8');
+	header('Content-Disposition: attachment;filename=alumnes.csv;');
+	echo "\xEF\xBB\xBF";
+	
 	if($query){
 		echo "id_alumne".";";
 		echo "dni_alu".";";
@@ -27,8 +32,8 @@ if (isset($_SESSION['nom_admin'])){
 	}
 
 
-	header('Content-Type: application/csv');
-	header('Content-Disposition: attachment; filename=alumnes.csv;');
+
+
 }else {
     header("location: ../../view/sinacceso.php");
 }

@@ -5,6 +5,10 @@ if (isset($_SESSION['nom_admin'])){
 	require_once '../conexion.php';
 	$sql = "select * from tbl_dept";
 	$query = $conexion->query($sql);
+	header('Content-Encoding: UTF-8');
+	header('Content-Type: application/csv;charset=UTF-8');
+	header('Content-Disposition: attachment;filename=departamentos.csv;');
+	echo "\xEF\xBB\xBF";
 	if($query){
 		echo "id_dept".";";
 		echo "codi_dept".";";
@@ -17,9 +21,6 @@ if (isset($_SESSION['nom_admin'])){
 		}
 	}
 
-
-	header('Content-Type: application/csv');
-	header('Content-Disposition: attachment; filename=departamentos.csv;');
 }else {
     header("location: ../../view/sinacceso.php");
 }
