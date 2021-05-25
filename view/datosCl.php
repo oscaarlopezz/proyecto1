@@ -51,6 +51,7 @@ if (isset($_SESSION['nom_admin'])){
 </div>
 <?php
 error_reporting(0);
+$fil = $_POST['fil'];
 if ((isset($_POST['fil']) && $fil != '')) {
     $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor where tbl_classe.id_classe like '%$fil%' or tbl_classe.codi_classe like '%$fil%' or tbl_classe.nom_classe like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%'");
     $sql = "SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor where tbl_classe.id_classe like '%$fil%' or tbl_classe.codi_classe like '%$fil%' or tbl_classe.nom_classe like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%'";

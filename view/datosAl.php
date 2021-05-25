@@ -53,6 +53,7 @@ if (isset($_SESSION['nom_admin'])){
 </div>
     <?php
     error_reporting(0);
+    $fil = $_POST['fil'];
     if ((isset($_POST['fil']) && $fil != '')) {
       $result = mysqli_query($conexion,"SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.id_alumne like '%$fil%' or tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.nom_classe like '%$fil%'");
       $sql = "SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.nom_classe like '%$fil%'";
