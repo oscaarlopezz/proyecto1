@@ -51,19 +51,21 @@ if (isset($_SESSION['nom_admin'])){
 </div>
 <?php
 error_reporting(0);
-$fil = $_POST['fil'];
-if (!($fil == '')) {
+if ((isset($_POST['fil']) && $fil != '')) {
     $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor where tbl_classe.id_classe like '%$fil%' or tbl_classe.codi_classe like '%$fil%' or tbl_classe.nom_classe like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%'");
+    $sql = "SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor where tbl_classe.id_classe like '%$fil%' or tbl_classe.codi_classe like '%$fil%' or tbl_classe.nom_classe like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%'";
+    $count = mysqli_query($conexion,$sql);
+    $num = mysqli_num_rows($count);
 }else {
-        $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor");}
+        $result = mysqli_query($conexion,"SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor");
+        $sql = "SELECT * from tbl_classe inner join tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
+        $count = mysqli_query($conexion,$sql);
+        $num = mysqli_num_rows($count);
 
-     // Check connection
-    //  if (!$conexion) {
-    //      die("Connection failed: ".mysqli_connect_error());
-    //  }
-    //  $sql="SELECT * FROM tbl_classe INNER JOIN tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
-    //  $result=mysqli_query($conexion,$sql);
+}
+
  ?>
+ <h6>Se ha encontrado <?php echo "$num"; ?> dato/s que coinciden con la búsqueda</h6>
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">

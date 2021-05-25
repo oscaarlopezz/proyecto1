@@ -52,25 +52,28 @@ if (isset($_SESSION['nom_admin'])){
     <a href="../services/CSV/csvAl.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
     <?php
-    // error_reporting(0);
-    // $fil = $_POST['fil']
-    // if (!($fil == '')) {
-    //     $result = mysqli_query($conexion,"SELECT tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu = '%$fil%' or tbl_alumne.nom_alu = '%$fil%'");
-    // }
     error_reporting(0);
-    $fil = $_POST['fil'];
-    if (!($fil == '')) {
-        $result = mysqli_query($conexion,"SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.id_alumne like '%$fil%' or tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.nom_classe like '%$fil%'");
-    }else {
-            $result = mysqli_query($conexion,"SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe");}
+    if ((isset($_POST['fil']) && $fil != '')) {
+      $result = mysqli_query($conexion,"SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.id_alumne like '%$fil%' or tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.nom_classe like '%$fil%'");
+      $sql = "SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe where tbl_alumne.dni_alu like '%$fil%' or tbl_alumne.nom_alu like '%$fil%' or tbl_alumne.cognom1_alu like '%$fil%' or tbl_alumne.cognom2_alu like '%$fil%' or tbl_alumne.telf_alu like '%$fil%' or tbl_alumne.email_alu like '%$fil%' or tbl_classe.nom_classe like '%$fil%'";
+          $count = mysqli_query($conexion,$sql);
+          $num = mysqli_num_rows($count);
+  }else {
+          $result = mysqli_query($conexion,"SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe");
+          $sql = "SELECT * from tbl_alumne inner join tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
+          $count = mysqli_query($conexion,$sql);
+          $num = mysqli_num_rows($count);
+  }
 
-        //  Check connection
-    //      if (!$conexion) {
-    //          die("Connection failed: ".mysqli_connect_error());
-    //      }
-    //     $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
-    //     $result=mysqli_query($conexion,$sql);
-    ?>
+      //  Check connection
+  //      if (!$conexion) {
+  //          die("Connection failed: ".mysqli_connect_error());
+  //      }
+  //     $sql="SELECT tbl_alumne.id_alumne,tbl_alumne.dni_alu,tbl_alumne.nom_alu,tbl_alumne.cognom1_alu,tbl_alumne.cognom2_alu,tbl_alumne.telf_alu,tbl_alumne.email_alu,tbl_classe.nom_classe FROM tbl_alumne INNER JOIN tbl_classe on tbl_alumne.classe=tbl_classe.id_classe";
+  //     $result=mysqli_query($conexion,$sql);
+      // ----------------------------------------------
+?>
+<h6>Se ha encontrado <?php echo "$num"; ?> dato/s que coinciden con la búsqueda</h6>
 
     <div class="table">
     <table class="table table-striped">

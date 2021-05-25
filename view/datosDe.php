@@ -50,30 +50,25 @@ if (isset($_SESSION['nom_admin'])){
 <div class="csv">
     <a href="../services/CSV/csvDe.php" class="btn btn-primary" role="button" aria-pressed="true">Descargar CSV</a>
 </div>
+
 <?php
 error_reporting(0);
 $fil = $_POST['fil'];
-if (!($fil == '')) {
+if ((isset($_POST['fil']) && $fil != '')) {
     $result = mysqli_query($conexion,"SELECT * from tbl_dept where id_dept like '%$fil%' or codi_dept like '%$fil%' or nom_dept like '%$fil%'");
+        $sql = "SELECT * from tbl_dept where id_dept like '%$fil%' or codi_dept like '%$fil%' or nom_dept like '%$fil%'";
+        $count = mysqli_query($conexion,$sql);
+        $num = mysqli_num_rows($count);
 }else {
-        $result = mysqli_query($conexion,"SELECT * from tbl_dept");}
+        $result = mysqli_query($conexion,"SELECT * from tbl_dept");
+        $sql = "SELECT * from tbl_dept";
+        $count = mysqli_query($conexion,$sql);
+        $num = mysqli_num_rows($count);
 
-     // Check connection
-    //  if (!$conexion) {
-    //      die("Connection failed: ".mysqli_connect_error());
-    //  }
-    //  $sql="SELECT * FROM tbl_classe INNER JOIN tbl_professor on tbl_classe.tutor=tbl_professor.id_professor";
-    //  $result=mysqli_query($conexion,$sql);
+}
 ?>
+ <h6>Se ha encontrado <?php echo "$num"; ?> dato/s que coinciden con la búsqueda</h6>
 
-<!-- 
-     // Check connection
-     if (!$conexion) {
-         die("Connection failed: ".mysqli_connect_error());
-     }
-     $sql="select * from tbl_dept";
-     $result=mysqli_query($conexion,$sql);
- -->
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">

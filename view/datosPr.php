@@ -54,18 +54,22 @@ if (isset($_SESSION['nom_admin'])){
 <?php
 error_reporting(0);
 $fil = $_POST['fil'];
-if (!($fil == '')) {
+if ((isset($_POST['fil']) && $fil != '')) {
     $result = mysqli_query($conexion,"SELECT * from tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept where tbl_professor.id_professor like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%' or tbl_professor.cognom2_prof like '%$fil%' or tbl_professor.email_prof like '%$fil%' or tbl_professor.telf like '%$fil%' or tbl_dept.nom_dept like '%$fil%'");
+        $sql = "SELECT * from tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept where tbl_professor.id_professor like '%$fil%' or tbl_professor.nom_prof like '%$fil%' or tbl_professor.cognom1_prof like '%$fil%' or tbl_professor.cognom2_prof like '%$fil%' or tbl_professor.email_prof like '%$fil%' or tbl_professor.telf like '%$fil%' or tbl_dept.nom_dept like '%$fil%'";
+        $count = mysqli_query($conexion,$sql);
+        $num = mysqli_num_rows($count);
 }else {
-        $result = mysqli_query($conexion,"SELECT * from tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept");}
+        $result = mysqli_query($conexion,"SELECT * from tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept");
+        $sql = "SELECT * from tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept";
+        $count = mysqli_query($conexion,$sql);
+        $num = mysqli_num_rows($count);
+    }
 
-     // Check connection
-    //  if (!$conexion) {
-    //      die("Connection failed: ".mysqli_connect_error());
-    //  }
-    //  $sql="SELECT * FROM tbl_professor INNER JOIN tbl_dept on tbl_professor.dept=tbl_dept.id_dept";
-    //  $result=mysqli_query($conexion,$sql);
- ?>
+
+    // ----------------------------------------------
+    ?>
+<h6>Se ha encontrado <?php echo "$num"; ?> dato/s que coinciden con la búsqueda</h6>
 <div class="table">
 <table class="table table-striped">
         <thead class="table-dark">
